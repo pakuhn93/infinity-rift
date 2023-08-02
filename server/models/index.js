@@ -1,1 +1,3 @@
-module.exports = { };
+const Test = require('./Test');
+
+module.exports = Test;

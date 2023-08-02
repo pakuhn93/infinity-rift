@@ -1,10 +1,14 @@
-const { Tech, Matchup } = require('../models');
+const Test = require('../models');
 
 const resolvers = {
   Query: {
+    tests: async () => {
+      return Test.find({});
+    }
+
   },
-  Mutation: {
-  },
+  // Mutation: {
+  // },
 };
 
 module.exports = resolvers;
