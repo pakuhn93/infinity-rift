@@ -1,10 +1,11 @@
-const { Tech, Matchup } = require('../models');
-
+const { CardCharacter } = require('../models');
 const resolvers = {
-  Query: {
-  },
-  Mutation: {
-  },
+    Query: {
+        cardCharacters: async () => {
+            return CardCharacter.find({});
+        },
+    },
+    // Mutation: {},
 };
 
 module.exports = resolvers;

@@ -1,0 +1,163 @@
+[
+    
+        {
+            "name": "ZephyrBlade",
+            "element": "Wind"
+        },
+        {
+            "name": "GaleStrider",
+            "element": "Wind"
+        },
+        {
+            "name": "AirBender",
+            "element": "Wind"
+        },
+        {
+            "name": "CycloneRider",
+            "element": "Wind"
+        },
+        {
+            "name": "StormChaser",
+            "element": "Wind"
+        },
+        {
+            "name": "TerraGuardian",
+            "element": "Earth"
+        },
+        {
+            "name": "GolemMaster",
+            "element": "Earth"
+        },
+        {
+            "name": "EarthquakeSlayer",
+            "element": "Earth"
+        },
+        {
+            "name": "GaiaDefender",
+            "element": "Earth"
+        },
+        {
+            "name": "StoneSentinel",
+            "element": "Earth"
+        },
+        {
+            "name": "AquaKnight",
+            "element": "Water"
+        },
+        {
+            "name": "TidalSorceress",
+            "element": "Water"
+        },
+        {
+            "name": "HydroGuardian",
+            "element": "Water"
+        },
+        {
+            "name": "WaveWarden",
+            "element": "Water"
+        },
+        {
+            "name": "Neptune'sChampion",
+            "element": "Water"
+        },
+        {
+            "name": "Blazeheart",
+            "element": "Fire"
+        },
+        {
+            "name": "InfernoKnight",
+            "element": "Fire"
+        },
+        {
+            "name": "PyroPhoenix",
+            "element": "Fire"
+        },
+        {
+            "name": "Emberstrike",
+            "element": "Fire"
+        },
+        {
+            "name": "Flareblade",
+            "element": "Fire"
+        },
+        {
+            "name": "WhirlwindSpecter",
+            "element": "Wind"
+        },
+        {
+            "name": "BreezyShade",
+            "element": "Wind"
+        },
+        {
+            "name": "TornadoGust",
+            "element": "Wind"
+        },
+        {
+            "name": "SkySoarer",
+            "element": "Wind"
+        },
+        {
+            "name": "GustGoblin",
+            "element": "Wind"
+        },
+        {
+            "name": "RockMuncher",
+            "element": "Earth"
+        },
+        {
+            "name": "Terracrawler",
+            "element": "Earth"
+        },
+        {
+            "name": "MudGolem",
+            "element": "Earth"
+        },
+        {
+            "name": "BoulderBeast",
+            "element": "Earth"
+        },
+        {
+            "name": "QuakeTitan",
+            "element": "Earth"
+        },
+        {
+            "name": "Leviathan",
+            "element": "Water"
+        },
+        {
+            "name": "Serpentoid",
+            "element": "Water"
+        },
+        {
+            "name": "AquaKraken",
+            "element": "Water"
+        },
+        {
+            "name": "DeepseaHorror",
+            "element": "Water"
+        },
+        {
+            "name": "MarianaBeast",
+            "element": "Water"
+        },
+        {
+            "name": "Ignarok",
+            "element": "Fire"
+        },
+        {
+            "name": "Emberfang",
+            "element": "Fire"
+        },
+        {
+            "name": "Pyroclaw",
+            "element": "Fire"
+        },
+        {
+            "name": "Volcanix",
+            "element": "Fire"
+        },
+        {
+            "name": "Flamara",
+            "element": "Fire"
+        }
+    ]
