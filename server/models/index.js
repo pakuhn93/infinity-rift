@@ -1,3 +1,3 @@
 const CardCharacter = require('./CardCharacter');
-
-module.exports = { CardCharacter };
+const User = require('./User');
+module.exports = { CardCharacter, User };
