@@ -1,14 +1,11 @@
-const Test = require('../models');
-
+const { CardCharacter } = require('../models');
 const resolvers = {
-  Query: {
-    tests: async () => {
-      return Test.find({});
-    }
-
-  },
-  // Mutation: {
-  // },
+    Query: {
+        cardCharacters: async () => {
+            return CardCharacter.find({});
+        },
+    },
+    // Mutation: {},
 };
 
 module.exports = resolvers;
