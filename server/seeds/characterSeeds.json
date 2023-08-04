@@ -1,5 +1,6 @@
 [
     {
+        "_id": "507f1f77bcf86cd799439011",
         "tags": "monster",
         "name": "storm Claw",
         "element": "Wind",
@@ -7,6 +8,7 @@
         "health": 64
     },
     {
+        "_id": "507f1f77bcf86cd799439012",
         "tags": "hero",
         "name": "Gale Strider",
         "element": "Wind",
@@ -14,6 +16,7 @@
         "health": 57
     },
     {
+        "_id": "507f1f77bcf86cd799439013",
         "tags": "hero",
         "name": "Air Bender",
         "element": "Wind",
@@ -21,6 +24,7 @@
         "health": 50
     },
     {
+        "_id": "507f1f77bcf86cd799439014",
         "tags": "hero",
         "name": "Cyclone Rider",
         "element": "Wind",
@@ -28,6 +32,7 @@
         "health": 56
     },
     {
+        "_id": "507f1f77bcf86cd799439015",
         "tags": "hero",
         "name": "Storm Chaser",
         "element": "Wind",
@@ -35,6 +40,7 @@
         "health": 52
     },
     {
+        "_id": "507f1f77bcf86cd799439016",
         "tags": "hero",
         "name": "Terra Guardian",
         "element": "Earth",
@@ -42,6 +48,7 @@
         "health": 78
     },
     {
+        "_id": "507f1f77bcf86cd799439017",
         "tags": "monster",
         "name": "Golem Master",
         "element": "Earth",
@@ -49,6 +56,7 @@
         "health": 99
     },
     {
+        "_id": "507f1f77bcf86cd799439018",
         "tags": "hero",
         "name": "Earthquake Slayer",
         "element": "Earth",
@@ -56,6 +64,7 @@
         "health": 94
     },
     {
+        "_id": "507f1f77bcf86cd799439019",
         "tags": "hero",
         "name": "Gaia Defender",
         "element": "Earth",
@@ -63,6 +72,7 @@
         "health": 85
     },
     {
+        "_id": "507f1f77bcf86cd79943901a",
         "tags": "monster",
         "name": "Stone Sentinel",
         "element": "Earth",
@@ -70,6 +80,7 @@
         "health": 72
     },
     {
+        "_id": "507f1f77bcf86cd79943901b",
         "tags": "hero",
         "name": "Aqua Knight",
         "element": "Water",
@@ -77,6 +88,7 @@
         "health": 90
     },
     {
+        "_id": "507f1f77bcf86cd79943901c",
         "tags": "hero",
         "name": "Tidal Sorceress",
         "element": "Water",
@@ -84,6 +96,7 @@
         "health": 84
     },
     {
+        "_id": "507f1f77bcf86cd79943901d",
         "tags": "hero",
         "name": "Hydro Guardian",
         "element": "Water",
@@ -91,6 +104,7 @@
         "health": 75
     },
     {
+        "_id": "507f1f77bcf86cd79943901e",
         "tags": "monster",
         "name": "Wave Warden",
         "element": "Water",
@@ -98,6 +112,7 @@
         "health": 66
     },
     {
+        "_id": "507f1f77bcf86cd79943901f",
         "tags": "hero",
         "name": "Neptune's Champion",
         "element": "Water",
@@ -105,6 +120,7 @@
         "health": 58
     },
     {
+        "_id": "507f1f77bcf86cd799439020",
         "tags": "hero",
         "name": "Blaze heart",
         "element": "Fire",
@@ -112,6 +128,7 @@
         "health": 100
     },
     {
+        "_id": "507f1f77bcf86cd799439021",
         "tags": "hero",
         "name": "Inferno Knight",
         "element": "Fire",
@@ -119,6 +136,7 @@
         "health": 94
     },
     {
+        "_id": "507f1f77bcf86cd799439022",
         "tags": "monster",
         "name": "Pyro Phoenix",
         "element": "Fire",
@@ -126,6 +144,7 @@
         "health": 85
     },
     {
+        "_id": "507f1f77bcf86cd799439023",
         "tags": "hero",
         "name": "Ember strike",
         "element": "Fire",
@@ -133,6 +152,7 @@
         "health": 77
     },
     {
+        "_id": "507f1f77bcf86cd799439024",
         "tags": "hero",
         "name": "Flare blade",
         "element": "Fire",
@@ -140,6 +160,7 @@
         "health": 66
     },
     {
+        "_id": "507f1f77bcf86cd799439025",
         "tags": "monster",
         "name": "Whirlwind Specter",
         "element": "Wind",
@@ -147,6 +168,7 @@
         "health": 58
     },
     {
+        "_id": "507f1f77bcf86cd799439026",
         "tags": "monster",
         "name": "BreezyShade",
         "element": "Wind",
@@ -154,6 +176,7 @@
         "health": 62
     },
     {
+        "_id": "507f1f77bcf86cd799439027",
         "tags": "monster",
         "name": "TornadoGust",
         "element": "Wind",
@@ -161,6 +184,7 @@
         "health": 67
     },
     {
+        "_id": "507f1f77bcf86cd799439028",
         "tags": "monster",
         "name": "SkySoarer",
         "element": "Wind",
@@ -168,6 +192,7 @@
         "health": 71
     },
     {
+        "_id": "507f1f77bcf86cd799439029",
         "tags": "monster",
         "name": "GustGoblin",
         "element": "Wind",
@@ -175,6 +200,7 @@
         "health": 82
     },
     {
+        "_id": "507f1f77bcf86cd79943902a",
         "tags": "monster",
         "name": "RockMuncher",
         "element": "Earth",
@@ -182,6 +208,7 @@
         "health": 56
     },
     {
+        "_id": "507f1f77bcf86cd79943902b",
         "tags": "monster",
         "name": "Terracrawler",
         "element": "Earth",
@@ -189,6 +216,7 @@
         "health": 61
     },
     {
+        "_id": "507f1f77bcf86cd79943902c",
         "tags": "monster",
         "name": "MudGolem",
         "element": "Earth",
@@ -196,6 +224,7 @@
         "health": 65
     },
     {
+        "_id": "507f1f77bcf86cd79943902d",
         "tags": "monster",
         "name": "BoulderBeast",
         "element": "Earth",
@@ -203,6 +232,7 @@
         "health": 70
     },
     {
+        "_id": "507f1f77bcf86cd79943902e",
         "tags": "monster",
         "name": "QuakeTitan",
         "element": "Earth",
@@ -210,6 +240,7 @@
         "health": 75
     },
     {
+        "_id": "507f1f77bcf86cd79943902f",
         "tags": "monster",
         "name": "Leviathan",
         "element": "Water",
@@ -217,6 +248,7 @@
         "health": 51
     },
     {
+        "_id": "507f1f77bcf86cd799439030",
         "tags": "monster",
         "name": "Serpentoid",
         "element": "Water",
@@ -224,6 +256,7 @@
         "health": 56
     },
     {
+        "_id": "507f1f77bcf86cd799439031",
         "tags": "monster",
         "name": "AquaKraken",
         "element": "Water",
@@ -231,6 +264,7 @@
         "health": 61
     },
     {
+        "_id": "507f1f77bcf86cd799439032",
         "tags": "monster",
         "name": "DeepseaHorror",
         "element": "Water",
@@ -238,6 +272,7 @@
         "health": 67
     },
     {
+        "_id": "507f1f77bcf86cd799439033",
         "tags": "monster",
         "name": "MarianaBeast",
         "element": "Water",
@@ -245,6 +280,7 @@
         "health": 72
     },
     {
+        "_id": "507f1f77bcf86cd799439034",
         "tags": "monster",
         "name": "Ignarok",
         "element": "Fire",
@@ -252,6 +288,7 @@
         "health": 58
     },
     {
+        "_id": "507f1f77bcf86cd799439035",
         "tags": "monster",
         "name": "Emberfang",
         "element": "Fire",
@@ -259,6 +296,7 @@
         "health": 62
     },
     {
+        "_id": "507f1f77bcf86cd799439036",
         "tags": "monster",
         "name": "Pyroclaw",
         "element": "Fire",
@@ -266,6 +304,7 @@
         "health": 67
     },
     {
+        "_id": "507f1f77bcf86cd799439037",
         "tags": "monster",
         "name": "Volcanix",
         "element": "Fire",
@@ -273,6 +312,7 @@
         "health": 71
     },
     {
+        "_id": "507f1f77bcf86cd799439038",
         "tags": "monster",
         "name": "Flamara",
         "element": "Fire",

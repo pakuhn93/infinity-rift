@@ -8,9 +8,9 @@ const typeDefs = `
     strength: Int!  }
 
   type Deck {
-_id:ID!
-title: String!
-cards: [CardCharacter]
+    _id:ID!
+    title: String!
+    cards: [CardCharacter]
   }
 
   type User {
@@ -21,21 +21,20 @@ cards: [CardCharacter]
   }
   
   type Login {
-    _id:ID!
-    username: String!
-    password: String!
+user: User
   }
   type Query {
     cardCharacters: [CardCharacter]
     users: [User]
     decks: [Deck]
+    deck: Deck
   }
   type Mutation {
     addUser(username: String!, password: String!, email: String!): User
     login(username: String!, password: String!): Login
-    deleteUser(username: String,): User
-    createDeck(_id:ID, title: String!,cards: [ID]!,): Deck
+    createDeck(title: String!, cards: [ID]!): Deck
   }
 `;
 
 module.exports = typeDefs;
+// deleteUser(username: String,): User
