@@ -8,6 +8,7 @@ db.once('open', async () => {
     await CardCharacter.deleteMany({});
     await CardCharacter.insertMany(characterSeeds);
     console.log('Characters have all been deleted');
+
     await Deck.deleteMany({});
     await Deck.insertMany(deckseeds);
     console.log('Decks have all been deleted');
