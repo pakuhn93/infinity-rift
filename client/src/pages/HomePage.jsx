@@ -1,17 +1,6 @@
-// import NavBar from '../Components/NavBar';
 
-export default function HomePage(){
-    return (
-       import React from 'react';
-import './App.css';
-
-function App() {
+export default function HomePage() {
   return (
-    
-  );
-}
-
-export default App;
-
-    );
+    <div>HomePage</div>
+  )
 }
