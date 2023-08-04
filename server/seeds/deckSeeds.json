@@ -1,0 +1,299 @@
+[
+    {
+        "title": 1,
+        "cards": [
+            {
+                "name": "Storm Claw",
+                "element": "Wind",
+                "strength": 89,
+                "health": 64,
+                "tags": "monster"
+            },
+            {
+                "name": "Terra Guardian",
+                "element": "Earth",
+                "strength": 30,
+                "health": 78,
+                "tags": "hero"
+            },
+            {
+                "name": "Aqua Knight",
+                "element": "Water",
+                "strength": 9,
+                "health": 90,
+                "tags": "hero"
+            },
+            {
+                "name": "Blaze heart",
+                "element": "Fire",
+                "strength": 5,
+                "health": 100,
+                "tags": "hero"
+            }
+        ]
+    },
+    {
+        "title": 2,
+        "cards": [
+            {
+                "name": "Gale Strider",
+                "element": "Wind",
+                "strength": 97,
+                "health": 57,
+                "tags": "hero"
+            },
+            {
+                "name": "Golem Master",
+                "element": "Earth",
+                "strength": 38,
+                "health": 99,
+                "tags": "monster"
+            },
+            {
+                "name": "Tidal Sorceress",
+                "element": "Water",
+                "strength": 15,
+                "health": 84,
+                "tags": "hero"
+            },
+            {
+                "name": "Inferno Knight",
+                "element": "Fire",
+                "strength": 12,
+                "health": 94,
+                "tags": "hero"
+            }
+        ]
+    },
+    {
+        "title": 3,
+        "cards": [
+            {
+                "name": "Air Bender",
+                "element": "Wind",
+                "strength": 92,
+                "health": 50,
+                "tags": "hero"
+            },
+            {
+                "name": "Earthquake Slayer",
+                "element": "Earth",
+                "strength": 45,
+                "health": 94,
+                "tags": "hero"
+            },
+            {
+                "name": "Hydro Guardian",
+                "element": "Water",
+                "strength": 24,
+                "health": 75,
+                "tags": "hero"
+            },
+            {
+                "name": "Pyro Phoenix",
+                "element": "Fire",
+                "strength": 28,
+                "health": 85,
+                "tags": "monster"
+            }
+        ]
+    },
+    {
+        "title": 4,
+        "cards": [
+            {
+                "name": "Cyclone Rider",
+                "element": "Wind",
+                "strength": 80,
+                "health": 56,
+                "tags": "hero"
+            },
+            {
+                "name": "Gaia Defender",
+                "element": "Earth",
+                "strength": 53,
+                "health": 85,
+                "tags": "hero"
+            },
+            {
+                "name": "Wave Warden",
+                "element": "Water",
+                "strength": 31,
+                "health": 66,
+                "tags": "monster"
+            },
+            {
+                "name": "Ember strike",
+                "element": "Fire",
+                "strength": 34,
+                "health": 77,
+                "tags": "hero"
+            }
+        ]
+    },
+    {
+        "title": 5,
+        "cards": [
+            {
+                "name": "Whirlwind Specter",
+                "element": "Wind",
+                "strength": 98,
+                "health": 58,
+                "tags": "monster"
+            },
+            {
+                "name": "Stone Sentinel",
+                "element": "Earth",
+                "strength": 62,
+                "health": 72,
+                "tags": "monster"
+            },
+            {
+                "name": "Leviathan",
+                "element": "Water",
+                "strength": 100,
+                "health": 51,
+                "tags": "monster"
+            },
+            {
+                "name": "Flamara",
+                "element": "Fire",
+                "strength": 69,
+                "health": 75,
+                "tags": "hero"
+            }
+        ]
+    },
+    {
+        "title": 6,
+        "cards": [
+            {
+                "name": "Breezy Shade",
+                "element": "Wind",
+                "strength": 89,
+                "health": 62,
+                "tags": "monster"
+            },
+            {
+                "name": "Terracrawler",
+                "element": "Earth",
+                "strength": 84,
+                "health": 61,
+                "tags": "monster"
+            },
+            {
+                "name": "Serpentoid",
+                "element": "Water",
+                "strength": 95,
+                "health": 56,
+                "tags": "monster"
+            },
+            {
+                "name": "Ignarok",
+                "element": "Fire",
+                "strength": 98,
+                "health": 58,
+                "tags": "monster"
+            }
+        ]
+    },
+    {
+        "title": 7,
+        "cards": [
+            {
+                "name": "Tornado Gust",
+                "element": "Wind",
+                "strength": 75,
+                "health": 67,
+                "tags": "monster"
+            },
+            {
+                "name": "MudGolem",
+                "element": "Earth",
+                "strength": 78,
+                "health": 65,
+                "tags": "monster"
+            },
+            {
+                "name": "AquaKraken",
+                "element": "Water",
+                "strength": 88,
+                "health": 61,
+                "tags": "monster"
+            },
+            {
+                "name": "Emberfang",
+                "element": "Fire",
+                "strength": 94,
+                "health": 62,
+                "tags": "monster"
+            }
+        ]
+    },
+    {
+        "title": 8,
+        "cards": [
+            {
+                "name": "SkySoarer",
+                "element": "Wind",
+                "strength": 64,
+                "health": 71,
+                "tags": "monster"
+            },
+            {
+                "name": "BoulderBeast",
+                "element": "Earth",
+                "strength": 70,
+                "health": 70,
+                "tags": "monster"
+            },
+            {
+                "name": "DeepseaHorror",
+                "element": "Water",
+                "strength": 80,
+                "health": 67,
+                "tags": "monster"
+            },
+            {
+                "name": "Pyroclaw",
+                "element": "Fire",
+                "strength": 85,
+                "health": 67,
+                "tags": "monster"
+            }
+        ]
+    },
+    {
+        "title": 9,
+        "cards": [
+            {
+                "name": "GustGoblin",
+                "element": "Wind",
+                "strength": 50,
+                "health": 82,
+                "tags": "monster"
+            },
+            {
+                "name": "QuakeTitan",
+                "element": "Earth",
+                "strength": 64,
+                "health": 75,
+                "tags": "monster"
+            },
+            {
+                "name": "MarianaBeast",
+                "element": "Water",
+                "strength": 73,
+                "health": 72,
+                "tags": "monster"
+            },
+            {
+                "name": "Volcanix",
+                "element": "Fire",
+                "strength": 77,
+                "health": 71,
+                "tags": "monster"
+            }
+        ]
+    }
+]

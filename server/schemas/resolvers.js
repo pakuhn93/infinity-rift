@@ -1,4 +1,4 @@
-const { CardCharacter, User } = require('../models');
+const { CardCharacter, User, Deck } = require('../models');
 const { signToken, authenticationError } = require('../utils/auth');
 const bcrypt = require('bcrypt');
 const resolvers = {
@@ -9,11 +9,12 @@ const resolvers = {
         users: async () => {
             return User.find({});
         },
+        decks: async () => {
+            return Deck.find({});
+        },
     },
     Mutation: {
         addUser: async (parent, { email, username, password }) => {
-            // return User.create(args);
-            // If no user with email create a new user
             const hashedPassword = await bcrypt.hash(password, 10);
             const newUser = await User.create({
                 email,
@@ -21,6 +22,10 @@ const resolvers = {
                 password: hashedPassword,
             });
             return newUser;
+        },
+        createDeck: async () => {
+            const newDeck = await Deck.create({ title, cards });
+            return newDeck;
         },
         login: async (parent, { username, password }) => {
             const user = await User.findOne({ username });
@@ -39,6 +44,7 @@ const resolvers = {
         },
         deleteUser: async () => {
             return User.deleteOne({ req });
+            console.log('deleted user');
         },
     },
 };
