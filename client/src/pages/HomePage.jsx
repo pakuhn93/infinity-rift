@@ -1,14 +1,30 @@
-// import NavBar from '../Components/NavBar';
-// import { useState } from 'react';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import "./HomePage.css"; 
 
 export default function HomePage() {
   return (
     <div>
-        <NavBar/>
-        <p className='home-announcments'>HOME PAGE</p>
-        <Footer/>
+      <NavBar />
+      <div className="content-container">
+        <div className="home-banner">
+          <h1>Welcome to INFINITY RIFT!</h1>
+          <p>
+            txt soon
+          </p>
+          <button className="btn-play">Play Now</button>
+        </div>
+        <div className="middle-box">
+          <h2>How to Play</h2>
+          <p>
+            text
+          </p>
+          <p>
+            text 
+          </p>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
