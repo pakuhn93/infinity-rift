@@ -1,12 +1,12 @@
 const typeDefs = `
-type Test {
+  type CardCharacter {
     _id: ID!
-    name: String
-}
-
-type Query {
-    tests: [Test]
-}
+    name: String!
+    element: String!
+  }
+  type Query {
+    cardCharacters: [CardCharacter]
+  }
 `;
 
 module.exports = typeDefs;
