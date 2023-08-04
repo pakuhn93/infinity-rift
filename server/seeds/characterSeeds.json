@@ -1,163 +1,282 @@
 [
-    
-        {
-            "name": "ZephyrBlade",
-            "element": "Wind"
-        },
-        {
-            "name": "GaleStrider",
-            "element": "Wind"
-        },
-        {
-            "name": "AirBender",
-            "element": "Wind"
-        },
-        {
-            "name": "CycloneRider",
-            "element": "Wind"
-        },
-        {
-            "name": "StormChaser",
-            "element": "Wind"
-        },
-        {
-            "name": "TerraGuardian",
-            "element": "Earth"
-        },
-        {
-            "name": "GolemMaster",
-            "element": "Earth"
-        },
-        {
-            "name": "EarthquakeSlayer",
-            "element": "Earth"
-        },
-        {
-            "name": "GaiaDefender",
-            "element": "Earth"
-        },
-        {
-            "name": "StoneSentinel",
-            "element": "Earth"
-        },
-        {
-            "name": "AquaKnight",
-            "element": "Water"
-        },
-        {
-            "name": "TidalSorceress",
-            "element": "Water"
-        },
-        {
-            "name": "HydroGuardian",
-            "element": "Water"
-        },
-        {
-            "name": "WaveWarden",
-            "element": "Water"
-        },
-        {
-            "name": "Neptune'sChampion",
-            "element": "Water"
-        },
-        {
-            "name": "Blazeheart",
-            "element": "Fire"
-        },
-        {
-            "name": "InfernoKnight",
-            "element": "Fire"
-        },
-        {
-            "name": "PyroPhoenix",
-            "element": "Fire"
-        },
-        {
-            "name": "Emberstrike",
-            "element": "Fire"
-        },
-        {
-            "name": "Flareblade",
-            "element": "Fire"
-        },
-        {
-            "name": "WhirlwindSpecter",
-            "element": "Wind"
-        },
-        {
-            "name": "BreezyShade",
-            "element": "Wind"
-        },
-        {
-            "name": "TornadoGust",
-            "element": "Wind"
-        },
-        {
-            "name": "SkySoarer",
-            "element": "Wind"
-        },
-        {
-            "name": "GustGoblin",
-            "element": "Wind"
-        },
-        {
-            "name": "RockMuncher",
-            "element": "Earth"
-        },
-        {
-            "name": "Terracrawler",
-            "element": "Earth"
-        },
-        {
-            "name": "MudGolem",
-            "element": "Earth"
-        },
-        {
-            "name": "BoulderBeast",
-            "element": "Earth"
-        },
-        {
-            "name": "QuakeTitan",
-            "element": "Earth"
-        },
-        {
-            "name": "Leviathan",
-            "element": "Water"
-        },
-        {
-            "name": "Serpentoid",
-            "element": "Water"
-        },
-        {
-            "name": "AquaKraken",
-            "element": "Water"
-        },
-        {
-            "name": "DeepseaHorror",
-            "element": "Water"
-        },
-        {
-            "name": "MarianaBeast",
-            "element": "Water"
-        },
-        {
-            "name": "Ignarok",
-            "element": "Fire"
-        },
-        {
-            "name": "Emberfang",
-            "element": "Fire"
-        },
-        {
-            "name": "Pyroclaw",
-            "element": "Fire"
-        },
-        {
-            "name": "Volcanix",
-            "element": "Fire"
-        },
-        {
-            "name": "Flamara",
-            "element": "Fire"
-        }
-    ]
+    {
+        "tags": "monster",
+        "name": "storm Claw",
+        "element": "Wind",
+        "strength": 89,
+        "health": 64
+    },
+    {
+        "tags": "hero",
+        "name": "Gale Strider",
+        "element": "Wind",
+        "strength": 97,
+        "health": 57
+    },
+    {
+        "tags": "hero",
+        "name": "Air Bender",
+        "element": "Wind",
+        "strength": 92,
+        "health": 50
+    },
+    {
+        "tags": "hero",
+        "name": "Cyclone Rider",
+        "element": "Wind",
+        "strength": 80,
+        "health": 56
+    },
+    {
+        "tags": "hero",
+        "name": "Storm Chaser",
+        "element": "Wind",
+        "strength": 77,
+        "health": 52
+    },
+    {
+        "tags": "hero",
+        "name": "Terra Guardian",
+        "element": "Earth",
+        "strength": 30,
+        "health": 78
+    },
+    {
+        "tags": "monster",
+        "name": "Golem Master",
+        "element": "Earth",
+        "strength": 38,
+        "health": 99
+    },
+    {
+        "tags": "hero",
+        "name": "Earthquake Slayer",
+        "element": "Earth",
+        "strength": 45,
+        "health": 94
+    },
+    {
+        "tags": "hero",
+        "name": "Gaia Defender",
+        "element": "Earth",
+        "strength": 53,
+        "health": 85
+    },
+    {
+        "tags": "monster",
+        "name": "Stone Sentinel",
+        "element": "Earth",
+        "strength": 62,
+        "health": 72
+    },
+    {
+        "tags": "hero",
+        "name": "Aqua Knight",
+        "element": "Water",
+        "strength": 9,
+        "health": 90
+    },
+    {
+        "tags": "hero",
+        "name": "Tidal Sorceress",
+        "element": "Water",
+        "strength": 15,
+        "health": 84
+    },
+    {
+        "tags": "hero",
+        "name": "Hydro Guardian",
+        "element": "Water",
+        "strength": 24,
+        "health": 75
+    },
+    {
+        "tags": "monster",
+        "name": "Wave Warden",
+        "element": "Water",
+        "strength": 31,
+        "health": 66
+    },
+    {
+        "tags": "hero",
+        "name": "Neptune's Champion",
+        "element": "Water",
+        "strength": 45,
+        "health": 58
+    },
+    {
+        "tags": "hero",
+        "name": "Blaze heart",
+        "element": "Fire",
+        "strength": 5,
+        "health": 100
+    },
+    {
+        "tags": "hero",
+        "name": "Inferno Knight",
+        "element": "Fire",
+        "strength": 12,
+        "health": 94
+    },
+    {
+        "tags": "monster",
+        "name": "Pyro Phoenix",
+        "element": "Fire",
+        "strength": 28,
+        "health": 85
+    },
+    {
+        "tags": "hero",
+        "name": "Ember strike",
+        "element": "Fire",
+        "strength": 34,
+        "health": 77
+    },
+    {
+        "tags": "hero",
+        "name": "Flare blade",
+        "element": "Fire",
+        "strength": 40,
+        "health": 66
+    },
+    {
+        "tags": "monster",
+        "name": "Whirlwind Specter",
+        "element": "Wind",
+        "strength": 98,
+        "health": 58
+    },
+    {
+        "tags": "monster",
+        "name": "BreezyShade",
+        "element": "Wind",
+        "strength": 89,
+        "health": 62
+    },
+    {
+        "tags": "monster",
+        "name": "TornadoGust",
+        "element": "Wind",
+        "strength": 75,
+        "health": 67
+    },
+    {
+        "tags": "monster",
+        "name": "SkySoarer",
+        "element": "Wind",
+        "strength": 64,
+        "health": 71
+    },
+    {
+        "tags": "monster",
+        "name": "GustGoblin",
+        "element": "Wind",
+        "strength": 50,
+        "health": 82
+    },
+    {
+        "tags": "monster",
+        "name": "RockMuncher",
+        "element": "Earth",
+        "strength": 92,
+        "health": 56
+    },
+    {
+        "tags": "monster",
+        "name": "Terracrawler",
+        "element": "Earth",
+        "strength": 84,
+        "health": 61
+    },
+    {
+        "tags": "monster",
+        "name": "MudGolem",
+        "element": "Earth",
+        "strength": 78,
+        "health": 65
+    },
+    {
+        "tags": "monster",
+        "name": "BoulderBeast",
+        "element": "Earth",
+        "strength": 70,
+        "health": 70
+    },
+    {
+        "tags": "monster",
+        "name": "QuakeTitan",
+        "element": "Earth",
+        "strength": 64,
+        "health": 75
+    },
+    {
+        "tags": "monster",
+        "name": "Leviathan",
+        "element": "Water",
+        "strength": 100,
+        "health": 51
+    },
+    {
+        "tags": "monster",
+        "name": "Serpentoid",
+        "element": "Water",
+        "strength": 95,
+        "health": 56
+    },
+    {
+        "tags": "monster",
+        "name": "AquaKraken",
+        "element": "Water",
+        "strength": 88,
+        "health": 61
+    },
+    {
+        "tags": "monster",
+        "name": "DeepseaHorror",
+        "element": "Water",
+        "strength": 80,
+        "health": 67
+    },
+    {
+        "tags": "monster",
+        "name": "MarianaBeast",
+        "element": "Water",
+        "strength": 73,
+        "health": 72
+    },
+    {
+        "tags": "monster",
+        "name": "Ignarok",
+        "element": "Fire",
+        "strength": 98,
+        "health": 58
+    },
+    {
+        "tags": "monster",
+        "name": "Emberfang",
+        "element": "Fire",
+        "strength": 94,
+        "health": 62
+    },
+    {
+        "tags": "monster",
+        "name": "Pyroclaw",
+        "element": "Fire",
+        "strength": 85,
+        "health": 67
+    },
+    {
+        "tags": "monster",
+        "name": "Volcanix",
+        "element": "Fire",
+        "strength": 77,
+        "health": 71
+    },
+    {
+        "tags": "monster",
+        "name": "Flamara",
+        "element": "Fire",
+        "strength": 69,
+        "health": 75
+    }
+]

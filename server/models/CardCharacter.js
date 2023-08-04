@@ -10,8 +10,27 @@ const cardCharacterSchema = new Schema({
         required: true,
     },
     tags: {
-        type: Object,
+        type: String,
     },
+    health: {
+        type: Number,
+        required: true,
+    },
+    strength: {
+        type: Number,
+        required: true,
+    },
+
+    // stats: {
+    //     health: {
+    //         type: String,
+    //         required: true,
+    //     },
+    //     strength: {
+    //         type: String,
+    //         required: true,
+    //     },
+    // },
 });
 
 const CardCharacter = model(`CardCharacter`, cardCharacterSchema);
