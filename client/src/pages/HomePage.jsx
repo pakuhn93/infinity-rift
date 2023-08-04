@@ -2,6 +2,16 @@
 
 export default function HomePage(){
     return (
-        <h1>TESTING...</h1>
+       import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    
+  );
+}
+
+export default App;
+
     );
 }
