@@ -7,7 +7,7 @@ const deckSchema = new Schema({
     },
     cards: [
         {
-            type: Schema.Types.Mixed,
+            type: Schema.Types.ObjectId,
             ref: 'CardCharacter',
         },
     ],
