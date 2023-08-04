@@ -1,7 +1,6 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import NavBar from './components/NavBar';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -13,7 +12,6 @@ function App() {
     <ApolloProvider client={client}>
       <div>
         <Outlet />
-        <NavBar/>
       </div>
     </ApolloProvider>
   );
