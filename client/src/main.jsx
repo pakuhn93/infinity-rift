@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import Login from './pages/Login';
 
 import App from './App.jsx';
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
         index: true,
         element: <HomePage />
       },
+      {
+        path: '/login',
+        element: <Login />
+      }
      ],
   },
 ]);
