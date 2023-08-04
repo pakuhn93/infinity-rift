@@ -4,11 +4,18 @@ const typeDefs = `
     name: String!
     element: String!
   }
+  
   type User {
     _id: ID!
     username: String!
     password: String!
     email: String!
+  }
+  
+  type Login {
+    _id:ID!
+    username: String!
+    password: String!
   }
   type Query {
     cardCharacters: [CardCharacter]
@@ -16,6 +23,8 @@ const typeDefs = `
   }
   type Mutation {
     addUser(username: String!, password: String!, email: String!): User
+    login(username: String!, password: String!): Login
+    deleteUser(username: String,): User
   }
 `;
 
