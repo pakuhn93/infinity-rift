@@ -4,7 +4,7 @@ export default function Login(){
     return (
         <div>
             <NavBar />
-            <section>
+            <section id="login-section">
                 <label htmlFor= "in-user">Username:</label>
                 <br></br>
                 <input type= "text" id= "in-user" name= "in-user" />
@@ -12,7 +12,7 @@ export default function Login(){
                 <label htmlFor= "in-pass">Password:</label>
                 <br></br>
                 <input type= "text" id= "in-pass" name= "in-pass" />
-            </section> 
+            </section>
         </div>
     );
 }
