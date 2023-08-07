@@ -7,6 +7,10 @@ const typeDefs = `
     health: Int!
     strength: Int!  }
 
+    type Friend {
+      username: String!
+    }
+
   type Deck {
     _id:ID!
     title: String!
@@ -18,6 +22,7 @@ const typeDefs = `
     username: String!
     password: String!
     email: String!
+    friends: [Friend]
   }
   
   type Auth {
@@ -30,6 +35,7 @@ const typeDefs = `
     users: [User]
     decks: [Deck]
     deck: Deck
+    getSingleUser: User
   }
   type Mutation {
     addUser(username: String!, password: String!, email: String!): Auth

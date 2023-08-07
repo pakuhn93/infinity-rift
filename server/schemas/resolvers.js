@@ -10,6 +10,7 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
+        getSingleUser: async (parent, args, context) => {},
         cardCharacters: async (parent, args) => {
             return await CardCharacter.find({});
         },
