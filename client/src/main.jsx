@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import Login from './pages/Login';
 import LiveGame from './pages/LiveGame';
 import Test from './pages/test';
+import PostGame from './pages/PostGame';
 
 import App from './App.jsx';
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: '/livegame',
         element: <LiveGame />
       },
+      {
+        path: '/postgame',
+        element: <PostGame />
+      }
      ],
   },
 ]);

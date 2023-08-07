@@ -51,8 +51,12 @@ const WinPage = () => {
         />
       </div>
       <div style={{ textAlign: "center" }}>
-        <button className="btn" id="btn-playAgain">Play Again</button>
-        <button className="btn" id="Logout">Logout</button>
+        <button className="btn" id="btn-playAgain">
+          Play Again
+        </button>
+        <button className="btn" id="Logout">
+          Logout
+        </button>
       </div>
     </div>
   );
