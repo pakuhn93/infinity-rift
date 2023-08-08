@@ -12,7 +12,7 @@ export default function HomePage() {
           <p>
             txt soon
           </p>
-          <button className="btn-play">Play Now</button>
+          <button className="btn-play">play Now</button>
         </div>
         <div className="middle-box">
           <h2>How to Play</h2>

@@ -1,5 +1,9 @@
 /* Footer.css */
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: #333;
   color: white;
   padding: 10px;
@@ -8,24 +12,37 @@
   align-items: center;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .footer-links {
   display: flex;
 }
 
 .btn-footer {
-  background-color: transparent;
-  border: none;
+  background-color: #007BFF;
   color: white;
-  padding: 8px 16px;
-  margin: 0 4px;
-  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
   font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 4px;
 }
 
 .btn-footer:hover {
-  background-color: #555;
-}
-
-.footer-text {
-  font-size: 14px;
+  background-color: #0056b3;
 }
