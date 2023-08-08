@@ -1,22 +1,9 @@
-/* HomePage.css */
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
+* HomePage.css */
 .content-container {
-  width: 100%; /* Increase the width for a wider box */
-  max-width: 1000px; /* Set a maximum width to prevent it from becoming too wide on large screens */
-  height: 75vh; /* Increase the height for a taller box */
   padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  margin: 0 auto;
+  max-width: 800px;
 }
-
 
 .home-banner {
   text-align: center;
@@ -57,3 +44,4 @@ body {
   font-size: 18px;
   line-height: 1.5;
 }
+

@@ -23,6 +23,11 @@ export const QUERY_DECKS = gql `
         decks {
             _id
             title
+            cards {
+                _id
+                name
+                element
+            }
         }
     }
 `;

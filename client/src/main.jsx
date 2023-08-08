@@ -2,7 +2,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Login from './pages/Login';
-import PreGame from './pages/PreGame';
+import LiveGame from './pages/LiveGame';
+import Test from './pages/test';
+import PostGame from './pages/PostGame';
 
 import App from './App.jsx';
 
@@ -19,10 +21,6 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />,
-            },
-            {
-                path: '/pregame',
-                element: <PreGame />,
             },
         ],
     },
