@@ -1,11 +1,16 @@
 import "./NavBar.css";
 
+
 export default function NavBar() {
+  
   return (
     <nav className="navbar">
       <div className="nav-logo">
-        <img src="/logo.png" alt="Card Battle Game" />
-        <span className="logo-text">Infinity Rift</span>
+        <img src="./public/INFINITY RIFT 2.png" alt="Infinity Rift Logo" />
+        <span className="logo-text">
+          {" "}
+          <h2>INFINITY RIFT</h2> <h6>DECK DUEL DOMINATE </h6>
+        </span>
       </div>
       <div className="nav-links">
         <button className="btn-nav" id="btn-home">

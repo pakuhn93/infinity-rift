@@ -1,11 +1,16 @@
 /* NavBar.css */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #333;
   color: white;
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100; /* Ensure the header stays on top of other content */
 }
 
 .nav-logo {
@@ -21,6 +26,7 @@
 
 .logo-text {
   font-size: 24px;
+  font-weight: bold;
 }
 
 .nav-links {
@@ -28,15 +34,16 @@
 }
 
 .btn-nav {
-  background-color: transparent;
-  border: none;
+  background-color: #007BFF;
   color: white;
-  padding: 8px 16px;
-  margin: 0 4px;
-  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
   font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 4px;
 }
 
 .btn-nav:hover {
-  background-color: #555;
+  background-color: #0056b3;
 }
