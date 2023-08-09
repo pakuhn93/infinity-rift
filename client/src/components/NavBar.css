@@ -47,3 +47,25 @@
 .btn-nav:hover {
   background-color: #0056b3;
 }
+
+
+
+.modal-content {
+  background-color: #007BFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
