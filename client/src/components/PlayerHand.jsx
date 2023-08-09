@@ -1,7 +1,7 @@
 import randNum from '../utils/randNum';
 import { useState, useEffect } from 'react';
 
-export default function PlayerHand({ deckPlayer, deckComputer, loading }) {
+export default function PlayerHand({ deckPlayer, deckComputer }) {
     // initialize the playerHand with an empty array
     const [playerHand, setPlayerHand] = useState([]);
 
@@ -32,13 +32,13 @@ export default function PlayerHand({ deckPlayer, deckComputer, loading }) {
         if(!loading && deckPlayer != undefined && deckPlayer.length > 0){
             generatePlayerHand();
         }
-    }, [loading, deckPlayer]);    
+    }, [deckPlayer]);
 
     return (
         <div>
             <h1>PLAYER HAND</h1>
             {
-                (loading && deckPlayer != undefined)
+                (deckPlayer != undefined)
                 ? (<h1>Loading Hand...</h1>)
                 : (
                     <section id="playerHand">

@@ -5,22 +5,22 @@ import { useQuery } from '@apollo/client';
 import { QUERY_DECKS } from "../utils/queries";
 import { useState, useEffect } from 'react';
 
-export default function LiveGame() {
-    const { loading, data } = useQuery(QUERY_DECKS);
+export default function LiveGame(deckPlayer, deckComputer) {
+    // const { loading, data } = useQuery(QUERY_DECKS);
     // deckPlayer and deckComputer holds onto an array of cards from their Deck model
-    const [deckPlayer, setPlayerDeck] = useState([]);
-    const [deckComputer, setComputerDeck] = useState([]);
-    console.log('DATA', data);
+    // const [deckPlayer, setPlayerDeck] = useState([]);
+    // const [deckComputer, setComputerDeck] = useState([]);
+    // console.log('DATA', data);
     
     // runs the function inside when the value of loading changes
-    useEffect(() => {
-        if(data != undefined){
-            setPlayerDeck(data.decks[0].cards);
-            setComputerDeck(data.decks[1].cards);
-        }
-    }, [loading]);
+    // useEffect(() => {
+    //     if(data != undefined){
+    //         setPlayerDeck(data.decks[0].cards);
+    //         setComputerDeck(data.decks[1].cards);
+    //     }
+    // }, [loading]);
 
-    console.log('CARDS', deckPlayer);
+    // console.log('CARDS', deckPlayer);
 
     // Scoreboard | index 0 = player | index 1 = computer
     const [score, setScore] = useState([0, 0]);
@@ -56,7 +56,7 @@ export default function LiveGame() {
                 {
                     loading && data === undefined
                     ? (<h2>Loading Cards...</h2>)
-                    : <PlayerHand deckPlayer={deckPlayer} deckComputer={deckComputer} loading={loading}/>
+                    : <PlayerHand deckPlayer={deckPlayer} deckComputer={deckComputer}/>
                 }
             </section>
             <Footer />
