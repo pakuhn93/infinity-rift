@@ -10,7 +10,7 @@ export default function LiveGame() {
     // deckPlayer and deckComputer holds onto an array of cards from their Deck model
     const [deckPlayer, setPlayerDeck] = useState([]);
     const [deckComputer, setComputerDeck] = useState([]);
-    // console.log('DATA', data);
+    console.log('DATA', data);
     
     // runs the function inside when the value of loading changes
     useEffect(() => {
