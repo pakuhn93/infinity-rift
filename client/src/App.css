@@ -1,5 +1,13 @@
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #850b00;
+--col5: black;
+--col6: rgb(51, 50, 50);
+}
 /* Document
    ========================================================================== */
 /**
@@ -19,6 +27,7 @@
  * Remove the margin in all browsers.
  */
 body {
+  background-color: var(--col6);
   margin: 0;
 }
 

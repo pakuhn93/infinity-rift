@@ -1,0 +1,25 @@
+
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #850b00;
+--col5: black;
+--col6: rgb(51, 50, 50);
+}
+
+#body {
+    color: var(--col2);
+}
+
+
+.feedback {
+    text-decoration: 1px underline var(--col4);
+    margin: 2px;
+}
+
+.forms {
+    margin: 5px;
+        border: 1px solid var(--col3)
+
+}

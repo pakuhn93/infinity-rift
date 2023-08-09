@@ -29,16 +29,15 @@ const typeDefs = `
     token: ID!
     user: User
   }
+  
   type Query {
     me: User
     cardCharacters: [CardCharacter]
     users: [User]
     decks: [Deck]
-    deck: Deck
-    getSingleUser: User
   }
   type Mutation {
-    addUser(username: String!, password: String!, email: String!): Auth
+    register(username: String!, password: String!, email: String!): Auth
     login(username: String!, password: String!): Auth
     createDeck(title: String!, cards: [ID]!): Deck
     deleteDeck(id: ID!): Deck

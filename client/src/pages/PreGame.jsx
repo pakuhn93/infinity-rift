@@ -1,36 +1,72 @@
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import './pregame.css';
+import LiveGame from './LiveGame';
 
-const displayDecks = () => {
-    const decks = await Deck.find({})
-    return
-}
-export default function PreGame() {
+import { useQuery } from '@apollo/client';
+import { QUERY_DECKS } from '../utils/queries';
+import { useState } from 'react';
+import { Alert } from 'bootstrap';
+export default function Test() {
+    const { loading, data } = useQuery(QUERY_DECKS);
+    // check if need to display LiveGame or PreGame
+    const [gameReady, setGameReady] = useState(false);
+    console.log(data);
+
+    const [deckPlayer, setPlayerDeck] = useState([]);
+
+    // useEffect(() => {
+    //     if (loading != undefined) {
+    //         setPlayerDeck(data.decks[0].cards);
+    //         // setComputerDeck(data.decks[1].cards);
+    //     }
+    // }, [loading]);
+
+    // returns an array of Deck objects (models)
+
+    function onClickDeckHandler(deck) {
+        setPlayerDeck(deck);
+        console.log('my cards', deck);
+
+        setGameReady(true);
+    }
+
     return (
         <div>
             <NavBar />
-            <h1 id="titlePregame">pregame</h1>
-            <div>
-                <div id="sectionSelectDeck">
-                    <h1 id="selectableDecks">Select a Deck!</h1>
-                    <ul></ul>
-                </div>
+            {gameReady ? (
+                <LiveGame />
+            ) : (
+                <section id="decks">
+                    <br></br>
+                    <h1 id="titlePregame">Select Your Deck</h1>
+                    <br></br>
 
-                <div id="deckSelectionAlert">
-                    Are You Sure about this deck alert
-                </div>
-
-                <div id="sectionMyDeck">
-                    <h1 id="myDeck">Your Deck is here</h1>
-                    <ul id="myCards">
-                        <li>card</li>
-                        <li>card</li>
-                        <li>card</li>
-                        <li>card</li>
-                    </ul>
-                </div>
-            </div>
+                    {loading ? (
+                        <h1>Loading...</h1>
+                    ) : (
+                        data.decks.map((deck) => {
+                            return (
+                                <div
+                                    id="deck"
+                                    key={deck._id}
+                                >
+                                    <h1>{deck.title}</h1>
+                                    <ul></ul>
+                                    <button
+                                        onClick={() =>
+                                            onClickDeckHandler(deck.cards)
+                                        }
+                                    >
+                                        {' '}
+                                        Select Deck
+                                    </button>
+                                </div>
+                            );
+                        })
+                    )}
+                </section>
+            )}
             <Footer />
         </div>
     );

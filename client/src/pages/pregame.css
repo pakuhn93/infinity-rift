@@ -2,12 +2,15 @@
 --col1: rgb(106, 106, 106);
 --col2: white;
 --col3: #bfb879;
---col4: #bf79b2;
+--col4: #850b00;
+--col5: black;
 
 }
 
 #titlePregame {
-    color: var(--col2)
+    color: var(--col3);
+
+    -webkit-text-stroke: 1px var(--col4);
 }
 #selectableDecks {
     color: var(--col2)
@@ -36,4 +39,23 @@
 #sectionSelectDeck {
     background-color: var(--col1);
 
+}
+
+#deck {
+   /* display: flex;
+   flex-wrap: wrap; */
+   width: 300px;
+    background-color: var(--col3);
+    margin: 5px;
+    border: 2px solid var(--col4)
+}
+
+#decks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 800px;
+    height: 350px;
+    background-color: var(--col1);
+    border: 1px solid var(--col5)
 }

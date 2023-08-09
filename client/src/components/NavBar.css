@@ -1,10 +1,19 @@
 /* NavBar.css */
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #850b00;
+--col5: black;
+
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: var(--col5);
   color: white;
   padding: 10px;
   display: flex;
@@ -16,6 +25,10 @@
 .nav-logo {
   display: flex;
   align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--col4);
+  
 }
 
 .nav-logo img {
