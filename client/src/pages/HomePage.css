@@ -1,13 +1,35 @@
 /* HomePage.css */
-.content-container {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 800px;
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #850b00;
+--col5: black;
+--col6: rgb(51, 50, 50);
 }
 
-.home-banner {
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.content-container {
+  width: 100%; /* Increase the width for a wider box */
+  max-width: 1000px; /* Set a maximum width to prevent it from becoming too wide on large screens */
+  height: 75vh; /* Increase the height for a taller box */
+  padding: 20px;
+  background-color: var(--col1);
+  border: 1px solid var(--col3);
+}
+
+
+#banner {
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: var(--col6);
   padding: 40px;
   border-radius: 8px;
   margin-bottom: 20px;

@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_CARD_CHARACTERS = gql `
-    query Query {
+export const QUERY_CARD_CHARACTERS = gql`
+    query cardCharacters {
         cardCharacters {
             _id
             element
@@ -17,9 +17,8 @@ export const QUERY_CARD_CHARACTERS = gql `
 
 // `;
 
-
-export const QUERY_DECKS = gql `
-    query Query {
+export const QUERY_DECKS = gql`
+    query decks {
         decks {
             _id
             title
@@ -27,17 +26,31 @@ export const QUERY_DECKS = gql `
                 _id
                 name
                 element
+                strength
+                health
             }
         }
     }
 `;
 
-export const QUERY_USERS = gql `
-    query Query {
+export const QUERY_USERS = gql`
+    query users {
         users {
             _id
             username
             email
+        }
+    }
+`;
+
+// export const DECK = gql``;
+export const ME = gql`
+    query me {
+        me {
+            username
+            friends {
+                username
+            }
         }
     }
 `;

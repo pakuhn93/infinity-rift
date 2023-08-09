@@ -1,0 +1,61 @@
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #850b00;
+--col5: black;
+
+}
+
+#titlePregame {
+    color: var(--col3);
+
+    -webkit-text-stroke: 1px var(--col4);
+}
+#selectableDecks {
+    color: var(--col2)
+}
+
+#myDeck {
+    color: var(--col2)
+}
+
+#myCards {
+    background-color: var(--col1);
+        color: var(--col2); 
+}
+
+#myCards li{
+    display:flex;
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid var(--col4);
+}
+
+#sectionMyDeck {
+    background-color: var(--col1);
+}
+
+#sectionSelectDeck {
+    background-color: var(--col1);
+
+}
+
+#deck {
+   /* display: flex;
+   flex-wrap: wrap; */
+   width: 300px;
+    background-color: var(--col3);
+    margin: 5px;
+    border: 2px solid var(--col4)
+}
+
+#decks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 800px;
+    height: 350px;
+    background-color: var(--col1);
+    border: 1px solid var(--col5)
+}
