@@ -9,35 +9,23 @@ import PostGame from './pages/PostGame';
 import App from './App.jsx';
 
 const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: '',
-    children: [
-      {
-        index: true,
-        element: <HomePage />
-      },
-      {
-        path: '/test',
-        element: <Test />
-      },
-      {
-        path: '/login',
-        element: <Login />
-      },
-      {
-        path: '/livegame',
-        element: <LiveGame />
-      },
-      {
-        path: '/postgame',
-        element: <PostGame />
-      }
-     ],
-  },
+    {
+        path: '/',
+        element: <App />,
+        errorElement: '',
+        children: [
+            {
+                index: true,
+                element: <HomePage />,
+            },
+            {
+                path: '/login',
+                element: <Login />,
+            },
+        ],
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+    <RouterProvider router={router} />
 );

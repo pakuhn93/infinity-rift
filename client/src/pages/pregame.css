@@ -1,0 +1,39 @@
+:root {
+--col1: rgb(106, 106, 106);
+--col2: white;
+--col3: #bfb879;
+--col4: #bf79b2;
+
+}
+
+#titlePregame {
+    color: var(--col2)
+}
+#selectableDecks {
+    color: var(--col2)
+}
+
+#myDeck {
+    color: var(--col2)
+}
+
+#myCards {
+    background-color: var(--col1);
+        color: var(--col2); 
+}
+
+#myCards li{
+    display:flex;
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid var(--col4);
+}
+
+#sectionMyDeck {
+    background-color: var(--col1);
+}
+
+#sectionSelectDeck {
+    background-color: var(--col1);
+
+}
