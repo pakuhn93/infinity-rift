@@ -1,12 +1,16 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import { useQuery } from '@apollo/client';
-import { QUERY_DECKS } from "../utils/queries";
-
-export default function Test(){
-    const { loading, data } = useQuery(QUERY_DECKS);
-    console.log(data);
-
-    // returns an array of Deck objects (models)
-    
-}
+// {
+//     deck.cards.map((card) => {
+//         // const cards = [deck.cards];
+//         // const newCards = cards.filter();
+//         return (
+//             <li key={card._id}>
+//                 <h4>Card Name: {card.name}</h4>
+//                 <br /> <h6> Element: {card.element}</h6>
+//                 <br />
+//                 <h6>Health: {card.health}</h6>
+//                 <br />
+//                 <h6>Strength: {card.strength}</h6>
+//             </li>
+//         );
+//     });
+// }

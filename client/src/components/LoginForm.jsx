@@ -1,7 +1,8 @@
 // see SignupForm.js for comments
-
+import './Login.css';
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
@@ -13,7 +14,6 @@ const LoginForm = () => {
         username: '',
         password: '',
     });
-    const [validated] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
 
     const [login, { error }] = useMutation(LOGIN);
@@ -61,9 +61,8 @@ const LoginForm = () => {
     return (
         <>
             <Form
-                noValidate
-                validated={validated}
                 onSubmit={handleFormSubmit}
+                id="body"
             >
                 <Alert
                     dismissible
@@ -73,8 +72,10 @@ const LoginForm = () => {
                 >
                     Something went wrong with your login credentials!
                 </Alert>
-
-                <Form.Group className="mb-3">
+                <Form.Group
+                    class="forms"
+                    className="mb-3"
+                >
                     <Form.Label htmlFor="username">Username</Form.Label>
                     <Form.Control
                         type="text"
@@ -84,11 +85,17 @@ const LoginForm = () => {
                         value={userFormData.username}
                         required
                     />
-                    <Form.Control.Feedback type="invalid">
+                    <Form.Control.Feedback
+                        class="feedback"
+                        type="invalid"
+                    >
                         Username is required!
                     </Form.Control.Feedback>
                 </Form.Group>
-                <Form.Group className="mb-3">
+                <Form.Group
+                    class="forms"
+                    className="mb-3"
+                >
                     <Form.Label htmlFor="password">Password</Form.Label>
                     <Form.Control
                         type="password"
@@ -98,17 +105,28 @@ const LoginForm = () => {
                         value={userFormData.password}
                         required
                     />
-                    <Form.Control.Feedback type="invalid">
+                    <Form.Control.Feedback
+                        class="feedback"
+                        type="invalid"
+                    >
                         Password is required!
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Button
-                    disabled={!(userFormData.username && userFormData.password)}
                     type="submit"
                     variant="success"
+                    onSubmit={'Logged In User!!'}
                 >
                     Submit
                 </Button>
+
+                <Link
+                    to="/signup"
+                    className="btn-nav"
+                    id="btn-login"
+                >
+                    Signup?
+                </Link>
             </Form>
         </>
     );

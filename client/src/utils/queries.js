@@ -26,6 +26,8 @@ export const QUERY_DECKS = gql`
                 _id
                 name
                 element
+                strength
+                health
             }
         }
     }

@@ -120,6 +120,16 @@ const SignupForm = () => {
                 <Button
                     type="submit"
                     variant="success"
+                    onSubmit={
+                        <Alert
+                            dismissible
+                            onClose={() => setShowAlert(false)}
+                            show={showAlert}
+                            variant="success"
+                        >
+                            Something went wrong with your signup!
+                        </Alert>
+                    }
                 >
                     Submit
                 </Button>
