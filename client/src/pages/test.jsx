@@ -8,25 +8,5 @@ export default function Test(){
     console.log(data);
 
     // returns an array of Deck objects (models)
-    return (
-        <div>
-            <NavBar />
-            <section id="live-game">
-                <br></br>
-                <h1>Testing</h1>
-                <br></br>
-                {loading 
-                ?  (<h1>Loading...</h1>) 
-                :  (data.decks.map((deck) => {
-                    return (
-                        <li key={deck._id}>
-                            {deck.title}
-                        </li>
-                    );
-                })
-                )}
-            </section>
-            <Footer />
-        </div>
-    );
+    
 }

@@ -5,7 +5,8 @@ import Login from './pages/Login';
 import LiveGame from './pages/LiveGame';
 import Test from './pages/test';
 import PostGame from './pages/PostGame';
-
+import PreGame from './pages/PreGame';
+import Signup from './pages/Signup';
 import App from './App.jsx';
 
 const router = createBrowserRouter([
@@ -21,6 +22,22 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login />,
+            },
+            {
+                path: '/signup',
+                element: <Signup />,
+            },
+            {
+                path: 'pregame',
+                element: <PreGame />,
+            },
+            {
+                path: 'postgame',
+                element: <PostGame />,
+            },
+            {
+                path: 'livegame',
+                element: <LiveGame />,
             },
         ],
     },

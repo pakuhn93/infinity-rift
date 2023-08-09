@@ -10,25 +10,28 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
-        getSingleUser: async (parent, args, context) => {},
+
         cardCharacters: async (parent, args) => {
             return await CardCharacter.find({});
         },
         decks: async () => {
             return Deck.find({}).populate('cards');
         },
-        // users: async () => {
-        //     return User.find({});
-        // },
-        // deck: async (parent, { _id }) => {
-        //     return Deck.findById({ _id }).populate('CardCharacter');
-        // },
+        users: async () => {
+            return User.find({});
+        },
     },
     Mutation: {
-        addUser: async (parent, args) => {
+        // getSingleDeck: async (parent, { id }) => {
+        //     // const data = this.deck;
+        //     return Deck.findById(id).populate('cards');
+        // },
+
+        register: async (parent, args) => {
             // const hashedPassword = await bcrypt.hash(password, 10);
             const user = await User.create(args);
             const token = signToken(user);
+            console.log(user);
             return { token, user };
         },
         createDeck: async (parent, { title, cards }, context) => {
@@ -65,22 +68,22 @@ const resolvers = {
             }
             throw AuthenticationError;
         },
-        removeFromDeck: async (parent, args, context) => {
-            if (context.user) {
-                const updatedDeck = await Deck.findByIdAndUpdate(
-                    args.deckId,
-                    {
-                        $pull: {
-                            cards: args.cardId,
-                        },
-                    },
-                    { new: true }
-                );
+        // removeFromDeck: async (parent, args, context) => {
+        //     if (context.user) {
+        //         const updatedDeck = await Deck.findByIdAndUpdate(
+        //             args.deckId,
+        //             {
+        //                 $pull: {
+        //                     cards: args.cardId,
+        //                 },
+        //             },
+        //             { new: true }
+        //         );
 
-                return updatedDeck;
-            }
-            throw AuthenticationError;
-        },
+        //         return updatedDeck;
+        //     }
+        //     throw AuthenticationError;
+        // },
         // updateDeck: async (parent{title, cards}, context) => {
         //     if (context.user) {
         //         let newdeck = await Deck.findOneAndUpdate({})
@@ -105,6 +108,9 @@ const resolvers = {
 
             return { token, user };
         },
+        // getSingleUser: async (parent, args, context) => {
+        //     const desiredUser = await User.findById({ _id: context.user._id });
+        // },
         // deleteUser: async () => {
         //     return User.deleteOne({ req });
         //     console.log('deleted user');
