@@ -1,43 +1,56 @@
 import randNum from '../utils/randNum';
+import { useState, useEffect } from 'react';
 
-export default function PlayerHand({ deckPlayer, loading }) {
-    // console.log('My Cards', deckPlayer);
+export default function PlayerHand({ deckPlayer, deckComputer, loading }) {
+    // initialize the playerHand with an empty array
+    const [playerHand, setPlayerHand] = useState([]);
 
-    const generatePlayerHand = () => {
-        // console.log('CHECK PLAYER DECK', deckPlayer);
+    // generates the player's hand
+    function generatePlayerHand() {
+        // temporarily holds onto deckPlayer since it is read only and i need to manipulate it
+        let tempArr = [...deckPlayer];
         let playerArr = [];
         for(let i = 0; i < 4; i++){
-            let num = randNum(deckPlayer.length);
+            // generate a random number with our util
+            let num = randNum(tempArr.length);
+
             // selects a random index from the deck of cards
-            // console.log(i, playerArr);
             if(playerArr[0] === undefined){ 
-                playerArr[0] = deckPlayer[num];
-                deckPlayer.splice(num, 1);
+                playerArr[0] = tempArr[num];
+                tempArr.splice(num, 1);
             } else {
-                playerArr.push(deckPlayer[num]);
-                deckPlayer.splice(num, 1);
+                playerArr.push(tempArr[num]);
+                tempArr.splice(num, 1);
             }
         }
-        return playerArr;
+        console.log("Player's Hand: ", playerArr);
+        setPlayerHand(playerArr);
     }
-    
-    let playerHand = generatePlayerHand();
-    //  console.log('Player Hand: ', playerHand);
 
+    // runs the generatePlayerHand() function when one of the variables in the array passed as the 2nd parameter changes
+    useEffect(() => {
+        if(!loading && deckPlayer != undefined && deckPlayer.length > 0){
+            generatePlayerHand();
+        }
+    }, [loading, deckPlayer]);    
 
     return (
         <div>
             <h1>PLAYER HAND</h1>
             {
-                playerHand === undefined
-                ? <h1>Loading Player Hand...</h1>
-                : playerHand.map((card) => {
-                    return (
-                        <ul key={card._id}>
-                            <li>Name: {card.name}</li>
-                            <li>Element: {card.element} </li>
-                        </ul>
-                    )})
+                (loading && deckPlayer != undefined)
+                ? (<h1>Loading Hand...</h1>)
+                : (
+                    <section id="playerHand">
+                        {
+                            playerHand.map((card) => {
+                                return (
+                                    <li key={card._id}>{card.name}</li>
+                                );
+                            })
+                        }
+                    </section>
+                    )
             }
         </div>
     );
