@@ -1,6 +1,6 @@
 import randNum from '../utils/randNum';
 import { useState, useEffect } from 'react';
-import './playerHand.css';
+
 
 export default function PlayerHand({ deckPlayer, deckComputer }) {
     console.log("Player's Cards: ", deckPlayer);

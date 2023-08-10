@@ -14,15 +14,6 @@ export default function Test() {
     const [deckPlayer, setPlayerDeck] = useState([]);
     const [deckComputer, setComputerDeck] = useState([]);
 
-    // useEffect(() => {
-    //     if (loading != undefined) {
-    //         setPlayerDeck(data.decks[0].cards);
-    //         // setComputerDeck(data.decks[1].cards);
-    //     }
-    // }, [loading]);
-
-    // returns an array of Deck objects (models)
-
     function onClickDeckHandler(deck) {
         // set the player deck to the passed parameter, which is an array of cards in the deck
         setPlayerDeck(deck);
