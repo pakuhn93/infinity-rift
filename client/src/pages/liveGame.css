@@ -1,3 +1,7 @@
+body {
+    background: radial-gradient(circle, green, blue, orangered, yellow);
+}
+
 #scoreboard {
     margin-top: 3em;
     border: solid;
@@ -64,7 +68,9 @@
 }
 
 #roundWinner {
-    color: orangered
+    color: orangered;
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: black;
 }
 
 #score-player {
