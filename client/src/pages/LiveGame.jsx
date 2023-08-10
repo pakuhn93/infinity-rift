@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import PostGame from './PostGame';
 import { useState, useEffect } from 'react';
 import './liveGame.css';
 import randNum from '../utils/randNum';
@@ -12,10 +13,14 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
     const [computerHand, setComputerHand] = useState([]);
     const [computerField, setComputerField] = useState({});
 
-    // when passing props to PostGame, send a string: win || lose || tie 
+    // states to track the scoreboard 
     const [playerScore, setPlayerScore] = useState(0);
     const [computerScore, setComputerScore] = useState(0);
     const [roundWinner, setRoundWinner] = useState('');
+
+    // check to see if player has played; needed for useEffect & gameOver
+    const [checkPlayed, setCheckPlayed] = useState(false);
+    const [gameOver, setGameOver] = useState(false);
 
     // generates the player's hand
     function drawCards(player, deck) {
@@ -144,6 +149,19 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
 
         // check to see who wins the round
         checkWin(card.element, compCard.element);
+        setCheckPlayed(true);
+    }
+
+    // function that returns a string of who the winner is
+    // when passing props to PostGame, send a string: win || lose || tie
+    const checkWinner = () => {
+        if(playerScore === computerScore){
+            return 'tie';
+        } else if (playerScore > computerScore){
+            return 'win';
+        } else {
+            return 'lose';
+        }
     }
 
     // runs the drawCards() function when one of the variables in the array passed as the 2nd parameter changes
@@ -152,71 +170,86 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
         drawCards(false, deckComputer);
     }, [loading]);
 
+    useEffect(() => {
+        if (playerHand.length === 0 && checkPlayed){
+            setGameOver(true);
+        }
+    }, [playerHand]);
+
     return (
         <div>
             <NavBar />
-            <h1 id="scoreHeader">Scoreboard</h1>
-            <section id="scoreboard">
-                <div id="playerScore">
-                    <h1 id="score-player">Player: {playerScore}</h1>
-                </div>
-                <h1> | </h1>
-                <div id="computerScore">
-                    <h1 id="score-computer">Computer: {computerScore}</h1>
-                </div>
-            </section>
-            <section id="battlefield">
-                {cardPlayed ? (
-                    <div id={computerField._id} className="fieldCard">
-                        <p>Name: {computerField.name}</p>
-                        <p>Element: {computerField.element}</p>
-                    </div>
+            {
+                gameOver ? (
+                    <PostGame outcome={() => checkWinner()}/>
                 ) : (
-                    <></>
-                )}
-                <div>{roundWinner}</div>
-                {cardPlayed ? (
-                    <div
-                        id={playerField._id}
-                        className="fieldCard"
-                    >
-                        <p>Name: {playerField.name}</p>
-                        <p>Element: {playerField.element}</p>
-                    </div>
-                ) : (
-                    <h1>Choose Your Card</h1>
-                )}
-            </section>
-            <section id="cards-player">
-                {loading ? (
-                    <h1>Loading Hand...</h1>
-                ) : (
-                    <section
-                        id="playerHand"
-                    >
-                        {playerHand.map((card) => {
-                            return (
-                                <div
-                                    id={card._id}
-                                    key={card._id}
-                                    className="playerCard"
-                                >
-                                    <p> Name: {card.name}</p>
-                                    <p> Element: {card.element}</p>
-                                    <button
-                                        className="cardButton"
-                                        onClick={(event) =>
-                                            placeCard(event, card)
-                                        }
-                                    >
-                                        Play Card
-                                    </button>
+                    <div>
+                        <h1 id="scoreHeader">Scoreboard</h1>
+                        <section id="scoreboard">
+                            <div id="playerScore">
+                                <h1 id="score-player">Player: {playerScore}</h1>
+                            </div>
+                            <h1> | </h1>
+                            <div id="computerScore">
+                                <h1 id="score-computer">Computer: {computerScore}</h1>
+                            </div>
+                        </section>
+                        <section id="battlefield">
+                            {cardPlayed ? (
+                                <div id={computerField._id} className="fieldCard">
+                                    <p>Name: {computerField.name}</p>
+                                    <p>Element: {computerField.element}</p>
                                 </div>
-                            );
-                        })}
-                    </section>
-                )}
-            </section>
+                            ) : (
+                                <></>
+                            )}
+                            <div>{roundWinner}</div>
+                            {cardPlayed ? (
+                                <div
+                                    id={playerField._id}
+                                    className="fieldCard"
+                                >
+                                    <p>Name: {playerField.name}</p>
+                                    <p>Element: {playerField.element}</p>
+                                </div>
+                            ) : (
+                                <h1>Choose Your Card</h1>
+                            )}
+                        </section>
+                        <section id="cards-player">
+                            {loading ? (
+                                <h1>Loading Hand...</h1>
+                            ) : (
+                                <section
+                                    id="playerHand"
+                                >
+                                    {playerHand.map((card) => {
+                                        return (
+                                            <div
+                                                id={card._id}
+                                                key={card._id}
+                                                className="playerCard"
+                                            >
+                                                <p> Name: {card.name}</p>
+                                                <p> Element: {card.element}</p>
+                                                <button
+                                                    className="cardButton"
+                                                    onClick={(event) =>
+                                                        placeCard(event, card)
+                                                    }
+                                                >
+                                                    Play Card
+                                                </button>
+                                            </div>
+                                        );
+                                    })}
+                                </section>
+                            )}
+                        </section>
+                    </div>
+                )
+            }
+            
             <Footer />
         </div>
     );
