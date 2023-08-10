@@ -1,0 +1,14 @@
+#scoreboard {
+    border: solid;
+    display: flex;
+    justify-content: space-between;
+}
+
+#battlefield {
+    border: dotted;
+    height: 25em;
+}
+
+#scoreHeader {
+    text-align: center;
+}

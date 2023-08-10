@@ -1,7 +1,9 @@
 import randNum from '../utils/randNum';
 import { useState, useEffect } from 'react';
+import './playerHand.css';
 
 export default function PlayerHand({ deckPlayer, deckComputer }) {
+    console.log("Player's Cards: ", deckPlayer);
     // initialize the playerHand with an empty array
     const [playerHand, setPlayerHand] = useState([]);
 
@@ -27,25 +29,36 @@ export default function PlayerHand({ deckPlayer, deckComputer }) {
         setPlayerHand(playerArr);
     }
 
+    function placeCard(event){
+        console.log("Clicked Card: ", event.target);
+    }
+
     // runs the generatePlayerHand() function when one of the variables in the array passed as the 2nd parameter changes
     useEffect(() => {
-        if(!loading && deckPlayer != undefined && deckPlayer.length > 0){
-            generatePlayerHand();
-        }
+        generatePlayerHand();
     }, [deckPlayer]);
 
     return (
         <div>
-            <h1>PLAYER HAND</h1>
             {
-                (deckPlayer != undefined)
+                (deckPlayer == undefined)
                 ? (<h1>Loading Hand...</h1>)
                 : (
-                    <section id="playerHand">
+                    <section id="playerHand" display="inline">
                         {
                             playerHand.map((card) => {
                                 return (
-                                    <li key={card._id}>{card.name}</li>
+                                    <div id={card._id} key={card._id} className="playerCard">
+                                        <p>
+                                            Name: {card.name}
+                                        </p>
+                                        <p>
+                                            Element: {card.element}
+                                        </p>
+                                        <button className="cardButton" onClick={(event) => placeCard(event)}>
+                                            Play Card
+                                        </button>
+                                    </div>
                                 );
                             })
                         }
