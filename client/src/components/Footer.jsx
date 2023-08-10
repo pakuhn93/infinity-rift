@@ -1,5 +1,6 @@
 
 import "./Footer.css";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const githubUrl = " https://github.com/pakuhn93/infinity-rift"; //pauls github
@@ -17,15 +18,15 @@ export default function Footer() {
         </span>
       </div>
       <div className="footer-links">
-        <button className="btn-footer" id="btn-about">
+        <Link to="/about" className="btn-footer" id="btn-about">
           About
-        </button>
-        <button className="btn-footer" id="btn-signup">
+        </Link>
+        {/* <button className="btn-footer" id="btn-signup">
           Sign up for Updates
         </button>
         <button className="btn-footer" id="btn-suggestions">
           Suggestions
-        </button>
+        </button> */}
         <a href={githubUrl} target="_blank" rel="noopener noreferrer">
           <button className="btn-footer" id="btn-github">
             GitHub

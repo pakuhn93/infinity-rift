@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 import randNum from '../utils/randNum';
 
-export default function Test() {
+export default function PreGame() {
     const { loading, data } = useQuery(QUERY_DECKS);
     // check if need to display LiveGame or PreGame
     const [gameReady, setGameReady] = useState(false);
@@ -20,9 +20,11 @@ export default function Test() {
     function onClickDeckHandler(deck) {
         // set the player deck to the passed parameter, which is an array of cards in the deck
         setPlayerDeck(deck);
+        setComputerDeck(data.decks[randNum(data.decks.length)].cards)
         // setComputerDeck(data.decks[randNum(data.decks.cards.length)]);
-        
-        console.log('PreGame Cards: ', deck);
+        console.log('Data: ', data);
+        console.log('PreGame Player: ', deckPlayer);
+        console.log('PreGame Computer: ', deckComputer);
 
         setGameReady(true);
     }
@@ -31,28 +33,27 @@ export default function Test() {
         <div>
             <NavBar />
             {gameReady ? (
-                <LiveGame deckPlayer={deckPlayer} deckComputer={deckComputer} />
+                <LiveGame deckPlayer={deckPlayer} deckComputer={deckComputer} loading={loading} />
             ) : (
-                <section id="decks">
-                    <br></br>
+                <section id="deckWindow">
                     <h1 id="titlePregame">Select Your Deck</h1>
-                    <br></br>
+                    <section id="decks">                        
 
-                    {loading ? (
-                        <h1>Loading...</h1>
-                    ) : (
-                        data.decks.map((deck) => {
-                            return (
-                                <div id="deck" key={deck._id}>
-                                    <h1>{deck.title}</h1>
-                                    <ul></ul>
-                                    <button onClick={() => onClickDeckHandler(deck.cards)}>
-                                        Select Deck
-                                    </button>
-                                </div>
-                            );
-                        })
-                    )}
+                        {loading ? (
+                            <h1>Loading...</h1>
+                        ) : (
+                            data.decks.map((deck) => {
+                                return (
+                                    <div className="deck" key={deck._id}>
+                                        <h2>{deck.title}</h2>
+                                        <button className="btn-deck" onClick={() => onClickDeckHandler(deck.cards)}>
+                                            Select Deck
+                                        </button>
+                                    </div>
+                                );
+                            })
+                        )}
+                    </section>
                 </section>
             )}
             <Footer />

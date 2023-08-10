@@ -35,12 +35,12 @@ export default function NavBar() {
                         Home
                     </Link>
 
-                    <button
+                    {/* <button
                         className="btn-nav"
                         id="btn-card-library"
                     >
                         Card Library
-                    </button>
+                    </button> */}
 
                     <Link
                         to="/"
@@ -69,12 +69,7 @@ export default function NavBar() {
                                 &times;
                             </span>
                             <p>
-                                Some text in the Modal the rule of the game the
-                                rule of the game the rule of the game the rule
-                                of the game the rue of the game the rule of the
-                                game the rule of the game the rule of the game
-                                the rule of the game the rule of the game the
-                                rule of rthe game..
+                                Fire beats Air; Air beats Earth; Earth beats Water; Water beats Fire
                             </p>
                         </div>
                     </div>
@@ -103,13 +98,6 @@ export default function NavBar() {
                     Home
                 </Link>
 
-                <button
-                    className="btn-nav"
-                    id="btn-card-library"
-                >
-                    Card Library
-                </button>
-
                 <Link
                     to="/login"
                     className="btn-nav"
@@ -136,12 +124,7 @@ export default function NavBar() {
                             &times;
                         </span>
                         <p>
-                            Some text in the Modal the rule of the game the rule
-                            of the game the rule of the game the rule of the
-                            game the rue of the game the rule of the game the
-                            rule of the game the rule of the game the rule of
-                            the game the rule of the game the rule of rthe
-                            game..
+                            Fire beats Air; Air beats Earth; Earth beats Water; Water beats Fire
                         </p>
                     </div>
                 </div>
