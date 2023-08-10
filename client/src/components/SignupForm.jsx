@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { REGISTER } from '../utils/mutations';
@@ -133,6 +134,13 @@ const SignupForm = () => {
                 >
                     Submit
                 </Button>
+                <Link
+                    to="/login"
+                    className="btn-nav"
+                    id="btn-login"
+                >
+                    Login
+                </Link>
             </Form>
         </>
     );

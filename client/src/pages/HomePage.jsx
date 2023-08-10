@@ -10,12 +10,17 @@ export default function HomePage() {
             <div>
                 <NavBar />
                 <div className="content-container">
-                    <div
-                        className="home-banner">
+                    <div className="home-banner">
                         <h1>Welcome to INFINITY RIFT!</h1>
                         <p>txt soon</p>
 
-                        <button className="btn-play">Play Now</button>
+                        <Link
+                            to="/pregame"
+                            className="btn-nav"
+                            id="login-first"
+                        >
+                            Play Now!?
+                        </Link>
                     </div>
                     <div className="middle-box">
                         <h2>How to Play</h2>
