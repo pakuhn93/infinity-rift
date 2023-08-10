@@ -1,4 +1,5 @@
-* HomePage.css */
+
+
 .content-container {
   padding: 20px;
   margin: 0 auto;
@@ -33,6 +34,29 @@
   cursor: pointer;
 }
 
+.post-game-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url('/assets/gifs/4elements.jpeg');
+  /* url("client/public/assets/gifs/4elements.jpeg"); */
+  background-size: cover; /* Adjust to "cover", "contain", or other values as needed */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keep the background fixed while scrolling */
+}
+
+.left-gifs,
+.right-gifs {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .btn-play:hover {
   background-color: #0056b3;
 }
@@ -45,3 +69,39 @@
   line-height: 1.5;
 }
 
+.gif-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.victory-gif {
+  width: 225px;
+  margin: 35px;
+}
+
+.defeat-gif {
+  width: 225px;
+  margin: 35px;
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.play-again-gif {
+  display: block;
+  width: 200px; 
+  margin: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin:10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#d71313e8;
+}
+
+  
