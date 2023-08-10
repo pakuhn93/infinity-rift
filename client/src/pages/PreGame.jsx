@@ -6,27 +6,19 @@ import LiveGame from './LiveGame';
 import { useQuery } from '@apollo/client';
 import { QUERY_DECKS } from '../utils/queries';
 import { useState } from 'react';
-import { Alert } from 'bootstrap';
 export default function Test() {
     const { loading, data } = useQuery(QUERY_DECKS);
     // check if need to display LiveGame or PreGame
     const [gameReady, setGameReady] = useState(false);
-    console.log(data);
 
     const [deckPlayer, setPlayerDeck] = useState([]);
-
-    // useEffect(() => {
-    //     if (loading != undefined) {
-    //         setPlayerDeck(data.decks[0].cards);
-    //         // setComputerDeck(data.decks[1].cards);
-    //     }
-    // }, [loading]);
-
-    // returns an array of Deck objects (models)
+    const [deckComputer, setComputerDeck] = useState([]);
 
     function onClickDeckHandler(deck) {
+        // set the player deck to the passed parameter, which is an array of cards in the deck
         setPlayerDeck(deck);
-        console.log('my cards', deck);
+        
+        console.log('PreGame Cards: ', deck);
 
         setGameReady(true);
     }
@@ -35,7 +27,7 @@ export default function Test() {
         <div>
             <NavBar />
             {gameReady ? (
-                <LiveGame />
+                <LiveGame deckPlayer={deckPlayer} deckComputer={deckComputer} />
             ) : (
                 <section id="decks">
                     <br></br>
@@ -47,18 +39,10 @@ export default function Test() {
                     ) : (
                         data.decks.map((deck) => {
                             return (
-                                <div
-                                    id="deck"
-                                    key={deck._id}
-                                >
+                                <div id="deck" key={deck._id}>
                                     <h1>{deck.title}</h1>
                                     <ul></ul>
-                                    <button
-                                        onClick={() =>
-                                            onClickDeckHandler(deck.cards)
-                                        }
-                                    >
-                                        {' '}
+                                    <button onClick={() => onClickDeckHandler(deck.cards)}>
                                         Select Deck
                                     </button>
                                 </div>
