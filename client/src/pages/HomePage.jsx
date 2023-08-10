@@ -11,9 +11,7 @@ export default function HomePage() {
                 <NavBar />
                 <div className="content-container">
                     <div
-                        className="home-banner"
-                        class="banner"
-                    >
+                        className="home-banner">
                         <h1>Welcome to INFINITY RIFT!</h1>
                         <p>txt soon</p>
 
