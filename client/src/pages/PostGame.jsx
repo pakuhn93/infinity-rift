@@ -1,65 +1,270 @@
+// Win Page
 import NavBar from "../components/NavBar";
-import './PostGame.css'
+import "./PostGame.css";
 
-/* 
-This page handles the win/loss condition, and will have play again or logout functionality
-const WinPage = ({ hasWon, handlePlayAgain, handleLogout }) => {
+// This handles no props and no functionality at the moment
+const PostGame = () => {
   return (
     <div>
       <NavBar />
-          <div style={{ textAlign: "center" }}>
-            <img
-              src="./client/assets/gifs/victoryGif"
-              alt="Victory Gif 1"
-              style={{ width: "200px", margin: "10px" }}
-            />
-            <h2 style={{ display: "inline-block", margin: "10px" }}>
-              You Won!
-            </h2>
-            <img
-              src="./client/assets/gifs/victoryGif"
-              alt="Victory Gif 2"
-              style={{ width: "200px", margin: "10px" }}
-            />
+      <div className="post-game-container">
+        <div className="left-gifs">
+          <img
+            src="../public/assets/gifs/victory.gif"
+            alt="Victory Gif 1"
+            className="victory-gif"
+          />
+          <img
+            src="../public/assets/gifs/victory2.gif"
+            alt="Victory Gif 2"
+            className="victory-gif"
+          />
+          <img
+            src="../public/assets/gifs/victory3.gif"
+            alt="Victory Gif 3"
+            className="victory-gif"
+          />
+        </div>
+        <div>
+          <h2>
+            You Won!
+            <br /> Play Again?
+          </h2>
+          <img
+            src="../public/assets/gifs/playAgain.gif"
+            alt="Play Again Gif"
+            className="play-again-gif"
+          />
+          <div className="button-container">
+            <button className="btn" id="btn-playAgain">
+              Play Again
+            </button>
+            <button className="btn" id="Logout">
+              Logout
+            </button>
           </div>
-          <div style={{ textAlign: "center" }}>
-            <button onClick={handlePlayAgain}>Play Again</button>
-            <button onClick={handleLogout}>Logout</button>
-          </div>
-      <footer />
+        </div>
+        <div className="right-gifs">
+          <img
+            src="../public/assets/gifs/victory.gif"
+            alt="Victory Gif"
+            className="victory-gif"
+          />
+          <img
+            src="../public/assets/gifs/victory2.gif"
+            alt="Victory Gif 2"
+            className="victory-gif"
+          />
+          <img
+            src="../public/assets/gifs/victory3.gif"
+            alt="Victory Gif 3"
+            className="victory-gif"
+          />
+        </div>
+      </div>
     </div>
   );
 };
-*/
 
-// This handles no props and no functionality, just for testing
-const WinPage = () => {
-  return (
-    <div>
-      <NavBar />
-      <div style={{ textAlign: "center" }}>
-        <img
-          src="../public/assets/gifs/victory.gif"
-          alt="Victory Gif 1"
-          style={{ width: "300px", margin: "50px" }}
-        />
-        <h2 style={{ display: "inline-block", margin: "10px" }}>You Won!</h2>
-        <img
-          src="../public/assets/gifs/victory.gif"
-          alt="Victory Gif 2"
-          style={{ width: "300px", margin: "50px" }}
-        />
-      </div>
-      <div style={{ textAlign: "center" }}>
-        <button className="btn" id="btn-playAgain">
-          Play Again
-        </button>
-        <button className="btn" id="Logout">
-          Logout
-        </button>
-      </div>
-    </div>
-  );
-};
+export default PostGame;
 
-export default WinPage;
+// Loss Page
+// import NavBar from "../components/NavBar";
+// import "./PostGame.css";
+
+// // This handles no props and no functionality at the moment
+// const PostGame = () => {
+//   return (
+//     <div>
+//       <NavBar />
+//       <div className="post-game-container">
+//         <div className="left-gifs">
+//           <img
+//             src="../public/assets/gifs/defeat.gif"
+//             alt="Defeat Gif 1"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat2.gif"
+//             alt="Defeat Gif 2"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat3.gif"
+//             alt="Defeat Gif 3"
+//             className="defeat-gif"
+//           />
+//         </div>
+//         <div>
+//           <h2>
+//             You Lost!
+//             <br /> Play Again?
+//           </h2>
+//           <img
+//             src="../public/assets/gifs/playAgain.gif"
+//             alt="Play Again Gif"
+//             className="play-again-gif"
+//           />
+//           <div className="button-container">
+//             <button className="btn" id="btn-playAgain">
+//               Play Again
+//             </button>
+//             <button className="btn" id="Logout">
+//               Logout
+//             </button>
+//           </div>
+//         </div>
+//         <div className="right-gifs">
+//           <img
+//             src="../public/assets/gifs/defeat.gif"
+//             alt="Defeat Gif"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat2.gif"
+//             alt="Defeat Gif 2"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat3.gif"
+//             alt="Defeat Gif 3"
+//             className="defeat-gif"
+//           />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default PostGame;
+
+// Page with hasWon prop
+// import NavBar from "../components/NavBar";
+// import "./PostGame.css";
+
+// const PostGame = ({ hasWon }) => {
+//   return (
+//     <div>
+//       <NavBar />
+//       <div className="post-game-container">
+//         {/* If hasWon is true, render the win page */}
+//         {hasWon ? (
+//           <div>
+//             {        <div className="left-gifs">
+//           <img
+//             src="../public/assets/gifs/victory.gif"
+//             alt="Victory Gif 1"
+//             className="victory-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/victory2.gif"
+//             alt="Victory Gif 2"
+//             className="victory-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/victory3.gif"
+//             alt="Victory Gif 3"
+//             className="victory-gif"
+//           />
+//         </div>
+//         <div>
+//           <h2>
+//             You Won!
+//             <br /> Play Again?
+//           </h2>
+//           <img
+//             src="../public/assets/gifs/playAgain.gif"
+//             alt="Play Again Gif"
+//             className="play-again-gif"
+//           />
+//           <div className="button-container">
+//             <button className="btn" id="btn-playAgain">
+//               Play Again
+//             </button>
+//             <button className="btn" id="Logout">
+//               Logout
+//             </button>
+//           </div>
+//         </div>
+//         <div className="right-gifs">
+//           <img
+//             src="../public/assets/gifs/victory.gif"
+//             alt="Victory Gif"
+//             className="victory-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/victory2.gif"
+//             alt="Victory Gif 2"
+//             className="victory-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/victory3.gif"
+//             alt="Victory Gif 3"
+//             className="victory-gif"
+//           />
+//         </div>}
+//           </div>
+//         ) : (
+//           /* If hasWon is false, render the loss page */
+//           <div>
+//             {        <div className="left-gifs">
+//           <img
+//             src="../public/assets/gifs/defeat.gif"
+//             alt="Defeat Gif 1"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat2.gif"
+//             alt="Defeat Gif 2"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat3.gif"
+//             alt="Defeat Gif 3"
+//             className="defeat-gif"
+//           />
+//         </div>
+//         <div>
+//           <h2>
+//             You Lost!
+//             <br /> Play Again?
+//           </h2>
+//           <img
+//             src="../public/assets/gifs/playAgain.gif"
+//             alt="Play Again Gif"
+//             className="play-again-gif"
+//           />
+//           <div className="button-container">
+//             <button className="btn" id="btn-playAgain">
+//               Play Again
+//             </button>
+//             <button className="btn" id="Logout">
+//               Logout
+//             </button>
+//           </div>
+//         </div>
+//         <div className="right-gifs">
+//           <img
+//             src="../public/assets/gifs/defeat.gif"
+//             alt="Defeat Gif"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat2.gif"
+//             alt="Defeat Gif 2"
+//             className="defeat-gif"
+//           />
+//           <img
+//             src="../public/assets/gifs/defeat3.gif"
+//             alt="Defeat Gif 3"
+//             className="defeat-gif"
+//           />
+//         </div>}
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default PostGame;
