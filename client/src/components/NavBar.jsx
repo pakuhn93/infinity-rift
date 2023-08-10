@@ -35,12 +35,12 @@ export default function NavBar() {
                         Home
                     </Link>
 
-                    <button
+                    {/* <button
                         className="btn-nav"
                         id="btn-card-library"
                     >
                         Card Library
-                    </button>
+                    </button> */}
 
                     <Link
                         to="/"

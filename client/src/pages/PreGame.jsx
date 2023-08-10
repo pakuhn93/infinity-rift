@@ -20,9 +20,11 @@ export default function Test() {
     function onClickDeckHandler(deck) {
         // set the player deck to the passed parameter, which is an array of cards in the deck
         setPlayerDeck(deck);
+        setComputerDeck(data.decks[randNum(data.decks.length)].cards)
         // setComputerDeck(data.decks[randNum(data.decks.cards.length)]);
-        
-        console.log('PreGame Cards: ', deck);
+        console.log('Data: ', data);
+        console.log('PreGame Player: ', deckPlayer);
+        console.log('PreGame Computer: ', deckComputer);
 
         setGameReady(true);
     }
@@ -31,7 +33,7 @@ export default function Test() {
         <div>
             <NavBar />
             {gameReady ? (
-                <LiveGame deckPlayer={deckPlayer} deckComputer={deckComputer} />
+                <LiveGame deckPlayer={deckPlayer} deckComputer={deckComputer} loading={loading} />
             ) : (
                 <section id="decks">
                     <br></br>

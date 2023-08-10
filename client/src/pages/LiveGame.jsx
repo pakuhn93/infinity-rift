@@ -4,9 +4,7 @@ import { useState, useEffect } from 'react';
 import './liveGame.css';
 import randNum from '../utils/randNum';
 
-export default function LiveGame({ deckPlayer, deckComputer }) {
-    console.log("Player's Cards: ", deckPlayer);
-    console.log("Computer's Cards: ", deckComputer);
+export default function LiveGame({ deckPlayer, deckComputer, loading }) {
     // initialize the states used for the game
     const [playerHand, setPlayerHand] = useState([]);
     const [playerField, setPlayerField] = useState({});
@@ -14,10 +12,15 @@ export default function LiveGame({ deckPlayer, deckComputer }) {
     const [computerHand, setComputerHand] = useState([]);
     const [computerField, setComputerField] = useState({});
 
+    // when passing props to PostGame, send a string: win || lose || tie 
+    const [playerScore, setPlayerScore] = useState(0);
+    const [computerScore, setComputerScore] = useState(0);
+    const [roundWinner, setRoundWinner] = useState('');
+
     // generates the player's hand
     function drawCards(player, deck) {
         // temporarily holds onto deckPlayer since it is read only and i need to manipulate it
-        let tempArr = [...deckPlayer];
+        let tempArr = [...deck];
         let drawnCards = [];
         for (let i = 0; i < 4; i++) {
             // generate a random number with our util
@@ -32,58 +35,122 @@ export default function LiveGame({ deckPlayer, deckComputer }) {
                 tempArr.splice(num, 1);
             }
         }
-        console.log("Player's Hand: ", drawnCards);
         if (player) {
             setPlayerHand(drawnCards);
+            console.log("Player's Hand: ", drawnCards);
         } else {
             setComputerHand(drawnCards);
-            console.log('Computer Hand: ', computerHand);
+            console.log("Computer's Hand: ", computerHand);
         }
     }
 
+    // check to see who wins the round based on cards chosen
+    function checkWin(elementPlayer, elementComputer){
+        const msgTie = `Tie! ${elementPlayer} and ${elementComputer} collide and both are wiped out completely from the face of the planet!`;
+        const msgWin = `Player Wins! ${elementPlayer} DESTROYS ${elementComputer}!`;
+        const msgLose = `Computer Wins! ${elementComputer} DESTROYS ${elementPlayer}!`;
+
+        if(elementPlayer.toLowerCase() == 'fire'){
+            console.log("Check Elements: ", elementPlayer.toLowerCase(), elementComputer.toLowerCase());
+
+            switch (elementComputer.toLowerCase()){
+                case 'fire': // tie
+                    setRoundWinner(msgTie);
+                    break;
+                case 'water': // loss
+                    setComputerScore(computerScore + 1);
+                    setRoundWinner(msgLose);
+                    break;
+                case 'wind': // win
+                    setPlayerScore(playerScore + 1);
+                    setRoundWinner(msgWin);
+                    break;
+                case 'earth': // tie
+                    setRoundWinner(msgTie);
+                    break;
+                default:
+                    break;
+            }
+        } else if (elementPlayer.toLowerCase() == 'water'){
+            switch (elementComputer.toLowerCase()){
+                case 'fire': // win
+                    setPlayerScore(playerScore + 1);
+                    setRoundWinner(msgWin);
+                    break;
+                case 'water': // tie
+                    setRoundWinner(msgTie);
+                    break;
+                case 'wind': // loss
+                    setComputerScore(computerScore + 1);
+                    setRoundWinner(msgLose);
+                    break;
+                case 'earth': // tie
+                    setRoundWinner(msgTie);
+                    break;
+                default:
+                    break;
+            }
+        } else if (elementPlayer.toLowerCase() == 'wind'){
+            switch (elementComputer.toLowerCase()){
+                case 'fire': // lose
+                    setComputerScore(computerScore + 1);
+                    setRoundWinner(msgLose);
+                    break;
+                case 'water': // tie
+                    break;
+                case 'wind': // tie
+                    break;
+                case 'earth': // win
+                    setPlayerScore(playerScore + 1);
+                    setRoundWinner(msgWin);
+                    break;
+                default:
+                    break;
+            }
+        } else if (elementPlayer.toLowerCase() == 'earth'){
+            switch (elementComputer.toLowerCase()){
+                case 'fire': // tie
+                    break;
+                case 'water': // win
+                    setPlayerScore(playerScore + 1);
+                    setRoundWinner(msgWin);
+                    break;
+                case 'wind': // lose
+                    setComputerScore(computerScore + 1);
+                    setRoundWinner(msgLose);
+                    break;
+                case 'earth': // tie
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    // places the selected card onto the battlefield
     function placeCard(event, card) {
         console.log('Clicked Card: ', event.target.parentElement);
         console.log(card);
+
+        // selects the user's card to play based on click
         setPlayerHand(playerHand.filter((playerCard) => playerCard !== card));
         setPlayerField(card);
         setCardPlayed(true);
+
+        // selects the computer's card to play at random from their hand
+        let compCard = computerHand[randNum(computerHand.length)];
+        setComputerHand(computerHand.filter((computerCard) => computerCard !== compCard));
+        setComputerField(compCard);
+
+        // check to see who wins the round
+        checkWin(card.element, compCard.element);
     }
 
     // runs the drawCards() function when one of the variables in the array passed as the 2nd parameter changes
     useEffect(() => {
         drawCards(true, deckPlayer);
         drawCards(false, deckComputer);
-    }, [deckPlayer]);
-
-    /*
-        =========== ^ Player Hand ^ ============
-    */
-
-    // Scoreboard | index 0 = player | index 1 = computer
-    // when passing props to PostGame, send a string: win || lose || tie 
-    const [score, setScore] = useState([0, 0]);
-    const [win, setWin] = useState([false, false]);
-
-    // takes in the state variable 'win' as a parameter
-    const trackScore = () => {
-        // conditional to check who won the round
-        // Player = score[0] | Computer = score[1]
-        if (win[0] && win[1]) {
-            setWin([false, false]);
-            return;
-        } else if (win[0]) {
-            // Player Scored
-            setScore([score[0]++, score[1]]);
-            setWin([false, false]);
-            return;
-        } else if (win[1]) {
-            // Computer Scored
-            setScore([score[0], score[1]++]);
-            setWin([false, false]);
-            return;
-        }
-        return;
-    };
+    }, [loading]);
 
     return (
         <div>
@@ -91,36 +158,41 @@ export default function LiveGame({ deckPlayer, deckComputer }) {
             <h1 id="scoreHeader">Scoreboard</h1>
             <section id="scoreboard">
                 <div id="playerScore">
-                    <h1 id="score-player">Player: {score[0]}</h1>
+                    <h1 id="score-player">Player: {playerScore}</h1>
                 </div>
                 <h1> | </h1>
                 <div id="computerScore">
-                    <h1 id="score-computer">Computer: {score[1]}</h1>
+                    <h1 id="score-computer">Computer: {computerScore}</h1>
                 </div>
             </section>
             <section id="battlefield">
-                <div className="computerFieldCard">
-                    <p>COMPUTER PLACEHOLDER</p>
-                </div>
+                {cardPlayed ? (
+                    <div id={computerField._id} className="fieldCard">
+                        <p>Name: {computerField.name}</p>
+                        <p>Element: {computerField.element}</p>
+                    </div>
+                ) : (
+                    <></>
+                )}
+                <div>{roundWinner}</div>
                 {cardPlayed ? (
                     <div
                         id={playerField._id}
-                        className="playerFieldCard"
+                        className="fieldCard"
                     >
-                        <p> Name: {playerField.name}</p>
-                        <p> Element: {playerField.element}</p>
+                        <p>Name: {playerField.name}</p>
+                        <p>Element: {playerField.element}</p>
                     </div>
                 ) : (
-                    <div className="playerFieldCard">Select a Card to Play</div>
+                    <h1>Choose Your Card</h1>
                 )}
             </section>
             <section id="cards-player">
-                {deckPlayer == undefined ? (
+                {loading ? (
                     <h1>Loading Hand...</h1>
                 ) : (
                     <section
                         id="playerHand"
-                        display="inline"
                     >
                         {playerHand.map((card) => {
                             return (

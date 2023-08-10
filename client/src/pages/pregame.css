@@ -59,3 +59,8 @@
     background-color: var(--col1);
     border: 1px solid var(--col5)
 }
+
+body {
+    padding-top: 1em;
+    padding-bottom: 5em;
+}
