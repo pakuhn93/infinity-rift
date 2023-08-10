@@ -12,3 +12,20 @@
 #scoreHeader {
     text-align: center;
 }
+
+#playerHand {
+    border: solid;
+    display: flex
+}
+
+.playerCard {
+    border: solid;
+}
+
+.cardButton {
+    text-align: center;
+}
+
+.playerFieldCard {
+    border: solid;
+}
