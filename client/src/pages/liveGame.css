@@ -69,8 +69,6 @@ body {
 
 #roundWinner {
     color: orangered;
-    -webkit-text-stroke: 0.4px;
-    -webkit-text-stroke-color: black;
 }
 
 #score-player {
