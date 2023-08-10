@@ -1,0 +1,12 @@
+#playerHand {
+    border: solid;
+    display: flex
+}
+
+.playerCard {
+    border: solid;
+}
+
+.cardButton {
+    text-align: center;
+}
