@@ -73,7 +73,7 @@ const LoginForm = () => {
                     Something went wrong with your login credentials!
                 </Alert>
                 <Form.Group
-                    class="forms"
+                    // class="forms"
                     className="mb-3"
                 >
                     <Form.Label htmlFor="username">Username</Form.Label>
@@ -86,14 +86,14 @@ const LoginForm = () => {
                         required
                     />
                     <Form.Control.Feedback
-                        class="feedback"
+                        // class="feedback"
                         type="invalid"
                     >
                         Username is required!
                     </Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group
-                    class="forms"
+                    // class="forms"
                     className="mb-3"
                 >
                     <Form.Label htmlFor="password">Password</Form.Label>
@@ -106,7 +106,7 @@ const LoginForm = () => {
                         required
                     />
                     <Form.Control.Feedback
-                        class="feedback"
+                        // class="feedback"
                         type="invalid"
                     >
                         Password is required!
