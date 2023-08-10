@@ -1,7 +1,14 @@
 #scoreboard {
+    margin-top: 3em;
     border: solid;
     display: flex;
     justify-content: space-between;
+    color: darkgoldenrod;
+}
+
+#scoreHeader {
+    margin-top: 1em;
+    color: brown;
 }
 
 #battlefield {
@@ -9,9 +16,14 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: dotted;
-    height: 25em;
+    border: solid;
+    height: 20em;
     width: 50em;
+    color: darkgoldenrod;
+}
+
+#battlefield > .fieldCard {
+    color: yellow;
 }
 
 #scoreHeader {
@@ -21,7 +33,9 @@
 #playerHand {
     border: solid;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin-bottom: 3em;
+    color: darkgoldenrod;
 }
 
 .playerCard {
@@ -29,11 +43,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: yellow;
 }
 
 .cardButton {
     text-align: center;
-    background-color: darkgrey;
+    background-color: green;
+    color: white;
 }
 
 .fieldCard {
@@ -44,5 +60,19 @@
 }
 
 .playerCard > p {
-    color: gray;
+    color: orange;
+}
+
+#roundWinner {
+    color: orangered
+}
+
+#score-player {
+    color: green;
+    margin-left: 3em;
+}
+
+#score-computer {
+    color: darkred;
+    margin-right: 3em;
 }

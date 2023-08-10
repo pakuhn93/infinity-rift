@@ -184,7 +184,6 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
                     <PostGame outcome={() => checkWinner()}/>
                 ) : (
                     <div>
-                        <h1 id="scoreHeader">Scoreboard</h1>
                         <section id="scoreboard">
                             <div id="playerScore">
                                 <h1 id="score-player">Player: {playerScore}</h1>
@@ -203,7 +202,7 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
                             ) : (
                                 <></>
                             )}
-                            <div>{roundWinner}</div>
+                            <div id="roundWinner">{roundWinner}</div>
                             {cardPlayed ? (
                                 <div
                                     id={playerField._id}

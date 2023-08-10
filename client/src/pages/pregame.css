@@ -41,26 +41,31 @@
 
 }
 
-#deck {
-   /* display: flex;
-   flex-wrap: wrap; */
-   width: 300px;
+.deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
     background-color: var(--col3);
-    margin: 5px;
+    margin: 2px;
     border: 2px solid var(--col4)
+}
+
+.btn-deck {
+
 }
 
 #decks {
     display: flex;
+    height: 25em;
+    width: 70em;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 800px;
-    height: 350px;
     background-color: var(--col1);
     border: 1px solid var(--col5)
 }
 
-body {
+/* body {
     padding-top: 1em;
     padding-bottom: 5em;
-}
+} */
