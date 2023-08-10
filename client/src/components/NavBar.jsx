@@ -98,13 +98,6 @@ export default function NavBar() {
                     Home
                 </Link>
 
-                <button
-                    className="btn-nav"
-                    id="btn-card-library"
-                >
-                    Card Library
-                </button>
-
                 <Link
                     to="/login"
                     className="btn-nav"
