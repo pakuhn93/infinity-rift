@@ -6,31 +6,39 @@ import randNum from '../utils/randNum';
 
 export default function LiveGame({ deckPlayer, deckComputer }) {
     console.log("Player's Cards: ", deckPlayer);
-    // initialize the playerHand with an empty array
+    console.log("Computer's Cards: ", deckComputer);
+    // initialize the states used for the game
     const [playerHand, setPlayerHand] = useState([]);
     const [playerField, setPlayerField] = useState({});
     const [cardPlayed, setCardPlayed] = useState(false);
+    const [computerHand, setComputerHand] = useState([]);
+    const [computerField, setComputerField] = useState({});
 
     // generates the player's hand
-    function generatePlayerHand() {
+    function drawCards(player, deck) {
         // temporarily holds onto deckPlayer since it is read only and i need to manipulate it
         let tempArr = [...deckPlayer];
-        let playerArr = [];
+        let drawnCards = [];
         for (let i = 0; i < 4; i++) {
             // generate a random number with our util
             let num = randNum(tempArr.length);
 
             // selects a random index from the deck of cards
-            if (playerArr[0] === undefined) {
-                playerArr[0] = tempArr[num];
+            if (drawnCards[0] === undefined) {
+                drawnCards[0] = tempArr[num];
                 tempArr.splice(num, 1);
             } else {
-                playerArr.push(tempArr[num]);
+                drawnCards.push(tempArr[num]);
                 tempArr.splice(num, 1);
             }
         }
-        console.log("Player's Hand: ", playerArr);
-        setPlayerHand(playerArr);
+        console.log("Player's Hand: ", drawnCards);
+        if (player) {
+            setPlayerHand(drawnCards);
+        } else {
+            setComputerHand(drawnCards);
+            console.log('Computer Hand: ', computerHand);
+        }
     }
 
     function placeCard(event, card) {
@@ -41,9 +49,10 @@ export default function LiveGame({ deckPlayer, deckComputer }) {
         setCardPlayed(true);
     }
 
-    // runs the generatePlayerHand() function when one of the variables in the array passed as the 2nd parameter changes
+    // runs the drawCards() function when one of the variables in the array passed as the 2nd parameter changes
     useEffect(() => {
-        generatePlayerHand();
+        drawCards(true, deckPlayer);
+        drawCards(false, deckComputer);
     }, [deckPlayer]);
 
     /*

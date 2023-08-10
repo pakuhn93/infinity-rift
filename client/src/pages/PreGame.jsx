@@ -6,6 +6,9 @@ import LiveGame from './LiveGame';
 import { useQuery } from '@apollo/client';
 import { QUERY_DECKS } from '../utils/queries';
 import { useState } from 'react';
+
+import randNum from '../utils/randNum';
+
 export default function Test() {
     const { loading, data } = useQuery(QUERY_DECKS);
     // check if need to display LiveGame or PreGame
@@ -17,6 +20,7 @@ export default function Test() {
     function onClickDeckHandler(deck) {
         // set the player deck to the passed parameter, which is an array of cards in the deck
         setPlayerDeck(deck);
+        // setComputerDeck(data.decks[randNum(data.decks.cards.length)]);
         
         console.log('PreGame Cards: ', deck);
 
