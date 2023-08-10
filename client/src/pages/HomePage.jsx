@@ -48,7 +48,7 @@ export default function HomePage() {
             <div className="content-container">
                 <div className="home-banner">
                     <h1>Welcome to INFINITY RIFT!</h1>
-                    <p>txt soon</p>
+                    <p>Are you ready to play?</p>
 
                     <Link
                         to="/login"
@@ -60,8 +60,18 @@ export default function HomePage() {
                 </div>
                 <div className="middle-box">
                     <h2>How to Play</h2>
-                    <p>text</p>
-                    <p>text</p>
+                    <ol>
+                        <li>Select a deck.</li>
+                        <li>Select a card in your hand to play.</li>
+                        <li>The computer will then select a card.</li>
+                        <li>The winner is determined by the Element of the card.</li>
+                        <ul>
+                            <li>Fire beats Air</li>
+                            <li>Air beats Earth</li>
+                            <li>Earth beats Water</li>
+                            <li>Water beats Fire</li>
+                        </ul>
+                    </ol>
                 </div>
             </div>
             <Footer />

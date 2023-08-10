@@ -1,0 +1,26 @@
+.contributor-headers {
+    color: red;
+    text-align: center;
+}
+
+#contributors {
+    font-size: 36px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#earnest {
+    color: yellow;
+}
+
+#john {
+    color: lime;
+}
+
+#alfonso {
+    color: blueviolet;
+}
+
+#paul {
+    color: cyan;
+}

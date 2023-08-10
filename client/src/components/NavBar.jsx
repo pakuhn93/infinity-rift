@@ -69,12 +69,7 @@ export default function NavBar() {
                                 &times;
                             </span>
                             <p>
-                                Some text in the Modal the rule of the game the
-                                rule of the game the rule of the game the rule
-                                of the game the rue of the game the rule of the
-                                game the rule of the game the rule of the game
-                                the rule of the game the rule of the game the
-                                rule of rthe game..
+                                Fire beats Air; Air beats Earth; Earth beats Water; Water beats Fire
                             </p>
                         </div>
                     </div>

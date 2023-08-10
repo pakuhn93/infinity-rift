@@ -6,6 +6,7 @@ import LiveGame from './pages/LiveGame';
 import PostGame from './pages/PostGame';
 import PreGame from './pages/PreGame';
 import Signup from './components/Signup';
+import About from './pages/About';
 import App from './App.jsx';
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
             {
                 path: 'livegame',
                 element: <LiveGame />,
+            },
+            {
+                path:'about',
+                element: <About />
             },
         ],
     },

@@ -102,8 +102,10 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
                     setRoundWinner(msgLose);
                     break;
                 case 'water': // tie
+                    setRoundWinner(msgTie);
                     break;
                 case 'wind': // tie
+                    setRoundWinner(msgTie);
                     break;
                 case 'earth': // win
                     setPlayerScore(playerScore + 1);
@@ -115,6 +117,7 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
         } else if (elementPlayer.toLowerCase() == 'earth'){
             switch (elementComputer.toLowerCase()){
                 case 'fire': // tie
+                    setRoundWinner(msgTie);
                     break;
                 case 'water': // win
                     setPlayerScore(playerScore + 1);
@@ -125,6 +128,7 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
                     setRoundWinner(msgLose);
                     break;
                 case 'earth': // tie
+                    setRoundWinner(msgTie);
                     break;
                 default:
                     break;
