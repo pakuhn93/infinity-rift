@@ -185,7 +185,7 @@ export default function LiveGame({ deckPlayer, deckComputer, loading }) {
             <NavBar />
             {
                 gameOver ? (
-                    <PostGame outcome={() => checkWinner()}/>
+                    <PostGame outcome={checkWinner()}/>
                 ) : (
                     <div>
                         <section id="scoreboard">
