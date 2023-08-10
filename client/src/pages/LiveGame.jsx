@@ -60,6 +60,7 @@ export default function LiveGame({ deckPlayer, deckComputer }) {
     */
 
     // Scoreboard | index 0 = player | index 1 = computer
+    // when passing props to PostGame, send a string: win || lose || tie 
     const [score, setScore] = useState([0, 0]);
     const [win, setWin] = useState([false, false]);
 
